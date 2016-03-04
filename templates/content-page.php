@@ -42,12 +42,31 @@ this is content-page.php
 ?>
 
 <?php if ( $posts_obj->have_posts() ): ?>
-  <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
-    <div class="col-12 col-4-tablet ">
-      <?php get_template_part( 'templates/images/featured-image'); ?>
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </div>
-<?php endwhile; ?>
 
+  <article class="listings island">
 
-  <?php endif; wp_reset_postdata(); ?>
+    <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
+
+      <div class="col-12 col-4-tablet listing">
+          <div class="listing-inner">
+            <div class="listing-image">
+
+              <?php get_template_part( 'templates/images/featured-image'); ?>
+
+            </div>
+            <div class="listing-text">
+              <header>
+
+                <a href="<?php the_permalink(); ?>"><h2 class="no-margin" itemprop="headline"><?php the_title(); ?></h2></a>
+
+              </header>
+              <p><?php the_excerpt(); ?></p>
+            </div>
+          </div>
+      </div>
+
+    <?php endwhile; ?>
+
+  </article>
+
+<?php endif; wp_reset_postdata(); ?>

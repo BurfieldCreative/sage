@@ -6,10 +6,12 @@
 
 //fully responsive rather then breakpoints
 .container {
+
   @include breakpoint(small) {
     max-width: $breakpoint-desktop;
     width: auto;
    }
+
   @include breakpoint(medium) {
     max-width: $breakpoint-hd;
     width: auto;
@@ -21,15 +23,19 @@ main {
 }
 
 body.sidebar-primary {
+
   .sidebar {
     margin-top: $grid-gutter*3;
     @extend .col-12;
+
     @include breakpoint(small) {
       @extend .col-4-tablet;
     }
+
     @include breakpoint(medium) {
       @extend .col-3-desktop;
     }
+
     @include breakpoint(medium) {
       @extend .col-3-hd;
     }
@@ -37,14 +43,33 @@ body.sidebar-primary {
   main {
     margin-top: $grid-gutter*3;
     @extend .col-12;
+
     @include breakpoint(small) {
       @extend .col-8-tablet;
     }
+
     @include breakpoint(medium) {
       @extend .col-9-desktop;
     }
+
     @include breakpoint(large) {
       @extend .col-9-hd;
     }
+  }
+}
+
+.listings {
+  .listing {
+
+  }
+  .listing-inner {
+    background: #DDDDDD;
+  }
+  .listing-image {
+  }
+
+  .listing-text {
+    padding: $grid-gutter;
+    display: block;
   }
 }
