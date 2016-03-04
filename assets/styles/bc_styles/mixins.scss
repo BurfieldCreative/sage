@@ -23,14 +23,28 @@
   overflow: hidden;
 }
 
+// ------ sets the break points example usage copy and paste example below-------- //
+// .sidebar {
+//   mobile_styling
+//   @include breakpoint(small) {
+//     tablet_styling
+//   }
+//   @include breakpoint(medium) {
+//     desktop_styling
+//   }
+//   @include breakpoint(large) {
+//     hd_styling
+//   }
+// }
+
 @mixin breakpoint($point) {
-  @if $point == large {
-    @media (min-width: $breakpoint-hd) { @content; }
+  @if $point == small {
+    @media (min-width: $breakpoint-tablet)  { @content; }
   }
   @else if $point == medium {
     @media (min-width: $breakpoint-desktop) { @content; }
   }
-  @else if $point == small {
-    @media (min-width: $breakpoint-tablet)  { @content; }
+  @else if $point == large {
+    @media (min-width: $breakpoint-hd) { @content; }
   }
 }

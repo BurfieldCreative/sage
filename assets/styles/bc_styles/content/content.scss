@@ -15,3 +15,36 @@
     width: auto;
    }
 }
+
+main {
+  @extend .col-12;
+}
+
+body.sidebar-primary {
+  .sidebar {
+    margin-top: $grid-gutter*3;
+    @extend .col-12;
+    @include breakpoint(small) {
+      @extend .col-4-tablet;
+    }
+    @include breakpoint(medium) {
+      @extend .col-3-desktop;
+    }
+    @include breakpoint(medium) {
+      @extend .col-3-hd;
+    }
+  }
+  main {
+    margin-top: $grid-gutter*3;
+    @extend .col-12;
+    @include breakpoint(small) {
+      @extend .col-8-tablet;
+    }
+    @include breakpoint(medium) {
+      @extend .col-9-desktop;
+    }
+    @include breakpoint(large) {
+      @extend .col-9-hd;
+    }
+  }
+}

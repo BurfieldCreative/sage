@@ -99,23 +99,6 @@ $hamburgerHeight:                                   25px;
 $hamburgerWidth:                                    25px;
 $hamburgerSpacing:                                  9px;
 
-main {
-  @extend .col-9;
-}
-main {
-  & .container &{
-    .sidebar {
-      @extend .col-3;
-      background: red;
-    }
-
-  }
-}
-
- @if main + .sidebar == 2 { border: 1px solid;  }
-
-
-
 main img {
   width: 100%;
   height: auto;
