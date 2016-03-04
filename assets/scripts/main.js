@@ -105,7 +105,7 @@
         $('#bc-wrapper').removeClass('bc-menu-open');
         $('#mobile-menu-button').removeClass('active');
       }
-    })
+    });
 
 
 })(jQuery); // Fully reference jQuery after this point.
