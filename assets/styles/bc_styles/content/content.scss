@@ -1,0 +1,17 @@
+//These need to be the same color for the mobile menus to work
+#main-content,
+.bc-content {
+  background: white;
+}
+
+//fully responsive rather then breakpoints
+.container {
+  @include breakpoint(small) {
+    max-width: $breakpoint-desktop;
+    width: auto;
+   }
+  @include breakpoint(medium) {
+    max-width: $breakpoint-hd;
+    width: auto;
+   }
+}

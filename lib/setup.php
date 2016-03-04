@@ -10,11 +10,11 @@ use Roots\Sage\Assets;
 function setup() {
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/
-  add_theme_support('soil-clean-up');
-  add_theme_support('soil-nav-walker');
-  add_theme_support('soil-nice-search');
-  add_theme_support('soil-jquery-cdn');
-  add_theme_support('soil-relative-urls');
+  // add_theme_support('soil-clean-up');
+  // add_theme_support('soil-nav-walker');
+  // add_theme_support('soil-nice-search');
+  // add_theme_support('soil-jquery-cdn');
+  // add_theme_support('soil-relative-urls');
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -27,7 +27,11 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
+    'primary_navigation' => __('Header Navigation', 'sage')
+  ]);
+
+  register_nav_menus([
+    'secondary_navigation' => __('Footer Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -38,7 +42,7 @@ function setup() {
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
+  //  add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
 
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
@@ -50,29 +54,29 @@ function setup() {
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
-/**
- * Register sidebars
- */
-function widgets_init() {
-  register_sidebar([
-    'name'          => __('Primary', 'sage'),
-    'id'            => 'sidebar-primary',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ]);
-
-  register_sidebar([
-    'name'          => __('Footer', 'sage'),
-    'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ]);
-}
-add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+// /**
+//  * Register sidebars
+//  */
+// function widgets_init() {
+//   register_sidebar([
+//     'name'          => __('Primary', 'sage'),
+//     'id'            => 'sidebar-primary',
+//     'before_widget' => '<section class="widget %1$s %2$s">',
+//     'after_widget'  => '</section>',
+//     'before_title'  => '<h3>',
+//     'after_title'   => '</h3>'
+//   ]);
+//
+//   register_sidebar([
+//     'name'          => __('Footer', 'sage'),
+//     'id'            => 'sidebar-footer',
+//     'before_widget' => '<section class="widget %1$s %2$s">',
+//     'after_widget'  => '</section>',
+//     'before_title'  => '<h3>',
+//     'after_title'   => '</h3>'
+//   ]);
+// }
+// add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
 /**
  * Determine which pages should NOT display the sidebar

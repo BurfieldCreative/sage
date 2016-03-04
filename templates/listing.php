@@ -1,3 +1,6 @@
+<?php
+//Media block or text block remove unwanted markup below
+?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>
@@ -13,4 +16,3 @@
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>
-this is content-single.php

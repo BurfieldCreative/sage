@@ -1,0 +1,16 @@
+//Main header banner
+header.banner {
+  background: $headerbackground;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+
+    .site-logo {
+      display: block;
+      float: left;
+      margin: $grid-gutter 0;
+    }
+
+  }
+}

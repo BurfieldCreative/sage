@@ -1,0 +1,36 @@
+//These can be used mainly on actual divs to set the spacing
+.island {
+  padding-top: $grid-gutter*2;
+  padding-bottom: $grid-gutter*2;
+  overflow: hidden;
+}
+
+.island-top {
+  padding-top: $grid-gutter*2;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.island-bottom {
+  padding-top: 0;
+  padding-bottom: $grid-gutter*2;
+  overflow: hidden;
+}
+
+.island-half {
+  padding-top: $grid-gutter;
+  padding-bottom: $grid-gutter;
+  overflow: hidden;
+}
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: $breakpoint-hd) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: $breakpoint-desktop) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: $breakpoint-tablet)  { @content; }
+  }
+}

@@ -1,0 +1,69 @@
+//header menu
+.nav-header {
+  float: right;
+
+  ul {
+    padding: 0;
+    margin: 30px 0 0  0;
+
+    li {
+      float: left;
+      list-style: none;
+
+      a {
+        @extend .header-menu-buttons;
+      }
+    }
+  }
+}
+
+//footer menu
+.nav-footer {
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      float: left;
+      list-style: none;
+
+      a {
+        @extend .footer-menu-buttons;
+      }
+    }
+  }
+}
+
+
+//slideout mobile menu
+.bc-menu {
+  background: #282828;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0;
+
+      a {
+      	@extend .mobile-menu-buttons;
+      }
+    }
+  }
+}
+
+// hamburger menu icon
+// If you need to customise this more open up menu-animations.scss and do a search for hamburger
+.hamburger {
+	margin: $grid-gutter*2 0;
+  position: relative;
+  float: right;
+  z-index: 1;
+
+  span,
+  span:before,
+  span:after {
+  	background-color: white;
+  }
+}
