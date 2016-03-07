@@ -1,0 +1,66 @@
+// ==========================================================================
+//These need to be the same color for the mobile menus to work
+// ==========================================================================
+#main-content,
+.bc-content {
+  background: white;
+}
+
+// ==========================================================================
+//Fully responsive rather then breakpoints OPTIONAL
+// ==========================================================================
+.container {
+
+  @include breakpoint(small) {
+    max-width: $breakpoint-desktop;
+    width: auto;
+   }
+
+  @include breakpoint(medium) {
+    max-width: $breakpoint-hd;
+    width: auto;
+   }
+}
+
+// ==========================================================================
+//Layout settings
+// ==========================================================================
+main {
+  @extend .col-12;
+}
+
+body.sidebar-primary {
+
+  .sidebar {
+    margin-top: $grid-gutter*3;
+    @extend .col-12;
+
+    @include breakpoint(small) {
+      @extend .col-4-tablet;
+    }
+
+    @include breakpoint(medium) {
+      @extend .col-3-desktop;
+    }
+
+    @include breakpoint(medium) {
+      @extend .col-3-hd;
+    }
+  }
+  main {
+    margin-top: $grid-gutter*3;
+    @extend .col-12;
+
+    @include breakpoint(small) {
+      @extend .col-8-tablet;
+    }
+
+    @include breakpoint(medium) {
+      @extend .col-9-desktop;
+    }
+
+    @include breakpoint(large) {
+      @extend .col-9-hd;
+    }
+  }
+}

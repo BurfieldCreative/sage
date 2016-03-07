@@ -80,7 +80,7 @@
   //--------------------------------------------
 
   // Slideshow using http://kenwheeler.github.io/slick/
-    $('.your-class').slick({
+    $('.slider').slick({
      slidesToShow: 1,
      slidesToScroll: 1,
      arrows: false,
@@ -91,12 +91,13 @@
     $('.slider-nav').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
-      asNavFor: '.your-class',
+      asNavFor: '.slider',
       dots: true,
       centerMode: true,
       focusOnSelect: true
     });
 
+    // Mobile menu button
     $('#mobile-menu-button').click(function(){
       if(!$('#bc-wrapper').hasClass('bc-menu-open')) {
         $('#bc-wrapper').addClass('bc-menu-open');

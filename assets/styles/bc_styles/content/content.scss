@@ -1,75 +1,88 @@
-//These need to be the same color for the mobile menus to work
-#main-content,
-.bc-content {
-  background: white;
-}
+// ==========================================================================
+//Vertical Listings
+// ==========================================================================
+.vert-listings {
+  @extend .flex;
 
-//fully responsive rather then breakpoints
-.container {
+  @at-root {
 
-  @include breakpoint(small) {
-    max-width: $breakpoint-desktop;
-    width: auto;
-   }
-
-  @include breakpoint(medium) {
-    max-width: $breakpoint-hd;
-    width: auto;
-   }
-}
-
-main {
-  @extend .col-12;
-}
-
-body.sidebar-primary {
-
-  .sidebar {
-    margin-top: $grid-gutter*3;
-    @extend .col-12;
-
-    @include breakpoint(small) {
-      @extend .col-4-tablet;
-    }
-
-    @include breakpoint(medium) {
-      @extend .col-3-desktop;
-    }
-
-    @include breakpoint(medium) {
-      @extend .col-3-hd;
+    .listing-wrapper {
+      @extend .flex;
+      @extend .flex-row;
+      @extend .flex-wrap;
+      margin-left: -$grid-gutter;
+      margin-right: -$grid-gutter;
     }
   }
-  main {
-    margin-top: $grid-gutter*3;
-    @extend .col-12;
 
-    @include breakpoint(small) {
-      @extend .col-8-tablet;
-    }
-
-    @include breakpoint(medium) {
-      @extend .col-9-desktop;
-    }
-
-    @include breakpoint(large) {
-      @extend .col-9-hd;
-    }
+  a {
+    text-decoration: none;
   }
-}
 
-.listings {
   .listing {
-
+    overflow: hidden;
+    margin-bottom: $grid-gutter*2
   }
+
   .listing-inner {
     background: #DDDDDD;
   }
+
   .listing-image {
   }
 
   .listing-text {
     padding: $grid-gutter;
     display: block;
+  }
+}
+
+// ==========================================================================
+//Horizontal Listings
+// ==========================================================================
+.hoz-listings {
+  @extend .flex;
+
+  @at-root {
+    .listing-wrapper {
+      @extend .flex;
+      @extend .flex-row;
+      @extend .flex-wrap;
+      margin-left: -$grid-gutter;
+      margin-right: -$grid-gutter;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .listing {
+    overflow: hidden;
+    margin-bottom: $grid-gutter*2
+  }
+
+  .listing-inner {
+    background: #DDDDDD;
+  }
+
+  .listing-image {
+    float: left;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+  }
+
+  .listing-text {
+    padding: $grid-gutter;
+    display: block;
+    float: left;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      width: 50%;
+    }
   }
 }

@@ -23,6 +23,7 @@
   overflow: hidden;
 }
 
+// ==========================================================================
 // ------ sets the break points example usage copy and paste example below-------- //
 // .sidebar {
 //   mobile_styling
@@ -36,6 +37,7 @@
 //     hd_styling
 //   }
 // }
+// ==========================================================================
 
 @mixin breakpoint($point) {
   @if $point == small {
