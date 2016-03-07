@@ -98,8 +98,6 @@ $sitewideLinks:                                 #cd5c5c;
 
 // Colors
 $headerbackground:                                 #191818;
-$footer-background:                                #279bb2;
-$sub-footer-background:                            #282828;
 
 //hamburger
 $hamburgerHeight:                                   25px;
@@ -110,3 +108,27 @@ main img {
   width: 100%;
   height: auto;
 }
+
+// ==========================================================================
+// Primary Menu
+// ==========================================================================
+$p_menu:                                    red;
+$p_menu_hover:                              blue;
+$p_menu_current:                            orange;
+
+// ==========================================================================
+// Footer section
+// ==========================================================================
+//footer background colours
+$footer-background:                                         #279bb2;
+$sub-footer-background:                                     #282828;
+
+//footer menu link colors
+$footer_menu_background_color:                              transparent;
+$footer_menu_text_color:                                    white;
+
+$footer_menu_background_hover:                              darken($footer-background, 14%);
+$footer_menu_text_hover:                                    white;
+
+$footer_menu_background_current:                            darken($footer-background, 10%);
+$footer_menu_text_current:                                  white;
