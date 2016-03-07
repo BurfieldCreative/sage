@@ -18,7 +18,7 @@ a {
   transition: all 0.3s;
 
   &:hover, &:active { text-decoration: none; }
-  &:hover { background: #f9f9f9; }
+  &:hover { background: $pcolor; }
 
 }
 
@@ -31,31 +31,33 @@ a {
 }
 
 // ==========================================================================
-// header Buttons
+// header Buttons beginning at li
 // ==========================================================================
 
 .header-menu-buttons {
-  @extend .button;
-  background: transparent;
-  border: 0;
-  color: white;
+  a {
 
-  &:hover {
-    background: red;
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-  }
+    @extend .button;
+    background: transparent;
+    border: 0;
+    color: white;
+    margin: 0 $grid-gutter/2;
 
-  //The first li a
-  &:first-child & a {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+    &:hover {
+      background: $pcolor;
+      box-shadow: inset 0 -1px rgba(0,0,0,0);
+      color: #fff;
+    }
   }
 
   //The current menu item
-  &.current-menu-item & a {
-    background: rgba(0,0,0,0.4);
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
+  &.current-menu-item a{
+    background: $scolor;
+
+    &:hover {
+      //When hovering on the current menu item
+      background: $pcolor;
+    }
   }
 }
 
@@ -64,29 +66,29 @@ a {
 // ==========================================================================
 
 .footer-menu-buttons {
-  @extend .button;
-  background: transparent;
-  border: 0;
-  color: white;
-  padding: 0;
-  margin-right: $grid-gutter;
 
-  &:hover {
-    background: red;
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-  }
+  a {
 
-  //The first li a
-  &:first-child & a {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+    @extend .button;
+    background: transparent;
+    border: 0;
+    color: white;
+    padding: $grid-gutter/2;
+    margin-right: $grid-gutter/2;
+
+    &:hover {
+      background: darken($scolor, 5%);
+    }
   }
 
   //The current menu item
-  &.current-menu-item & a {
-    background: rgba(0,0,0,0.4);
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
+  &.current-menu-item a{
+    background: darken($scolor, 10%);
+
+    &:hover {
+      //When hovering on the current menu item
+      background: darken($scolor, 5%);
+    }
   }
 }
 

@@ -11,10 +11,7 @@
     li {
       float: left;
       list-style: none;
-
-      a {
-        @extend .header-menu-buttons;
-      }
+      @extend .header-menu-buttons;
     }
   }
 }
@@ -23,18 +20,21 @@
 //Footer menu
 // ==========================================================================
 .nav-footer {
-  margin: $grid-gutter*2 auto ;
+  margin: $grid-gutter*2 auto;
+
   ul {
     padding: 0;
     margin: 0;
 
+
+   @include breakpoint(medium) {
+     margin-left: -10px;
+   }
+
     li {
       float: left;
       list-style: none;
-
-      a {
-        @extend .footer-menu-buttons;
-      }
+      @extend .footer-menu-buttons;
     }
   }
 }

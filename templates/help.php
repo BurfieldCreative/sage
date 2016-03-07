@@ -71,7 +71,7 @@
 
 
 <h2 style="text-align: center;">Styling Break Points</h2>
-<ol>
+
 	<li>Heres an example using the media queries to change the sidebar depending on the screen size
 <pre>// .sidebar {
 //   mobile_styling
