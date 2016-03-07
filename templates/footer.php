@@ -1,16 +1,21 @@
 <footer class="footer">
-  <div class="container row island">
-    <div class='address nav-footer col-12 col-6-tablet col-4-desktop'>
+  <div class="container row island-top">
+    <div class='address col-12 col-6-tablet col-4-desktop footer-col-1'>
       this will be the address
     </div>
-    <nav class="nav-footer col-12 col-6-tablet col-4-desktop">
+    <div class=" col-12 col-6-tablet col-4-desktop footer-col-2">
+      something to go here
+    </div>
+    <div class=" col-12 col-6-tablet col-4-desktop footer-col-3">
+      something else to go here
+    </div>
+    <nav class="nav-footer col-12 clear">
       <?php
       if (has_nav_menu('secondary_navigation')) :
         wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'footer-menu']);
       endif;
       ?>
     </nav>
-
   </div>
   <div class="island-half sub-footer">
     <div class="col-12 col-6-tablet">

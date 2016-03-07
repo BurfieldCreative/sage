@@ -10,8 +10,6 @@ $base-line-height:                              22 !default;
 $base-font-weight:                              400 !default;
 $base-font-color:                               #585858 !default;
 $base-link-color:                               #cd5c5c !default;
-$pcolor:                                        #ccc;
-$scolor:                                        red;
 
 // Font Weights
 $font-100:                                      100 !default;
@@ -89,10 +87,19 @@ $breakpoint-hd:                                 ($container-hd + 20) !default;
 // ==========================================================================
 // Burfield extensions – BC Extras Set grid size for sidebar and main must always come to 12
 // ==========================================================================
+//primary color
+$pcolor:                                        #ccc;
+
+//secondary color
+$scolor:                                        red;
+
+//link styling can be found in buttons
+$sitewideLinks:                                 #cd5c5c;
 
 // Colors
 $headerbackground:                                 #191818;
-$footerbackground:                                  #279bb2;
+$footer-background:                                #279bb2;
+$sub-footer-background:                            #282828;
 
 //hamburger
 $hamburgerHeight:                                   25px;

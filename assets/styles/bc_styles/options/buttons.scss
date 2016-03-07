@@ -1,4 +1,10 @@
 // ==========================================================================
+// Sitewide link styling (the color can be set in variables.scss)
+// ==========================================================================
+a {
+   color: $sitewideLinks;
+}
+// ==========================================================================
 // Custom Buttons
 // ==========================================================================
 .button {
@@ -62,6 +68,8 @@
   background: transparent;
   border: 0;
   color: white;
+  padding: 0;
+  margin-right: $grid-gutter;
 
   &:hover {
     background: red;
