@@ -34,38 +34,40 @@ a {
 // header Buttons beginning at li
 // ==========================================================================
 
-.header-menu-buttons {
-  a {
-
-    @extend .button;
-    background: transparent;
-    border: 0;
-    color: white;
-    margin: 0 $grid-gutter/2;
-
-    &:hover {
-      background: $p_menu_hover;
-      box-shadow: inset 0 -1px rgba(0,0,0,0);
-      color: #fff;
+.header-menu {
+    a {
+    
+        @extend .button;
+        background: transparent;
+        border: 0;
+        color: white;
+        margin: 0 $grid-gutter/2;
+    
+        &:hover {
+            background: $p_menu_hover;
+            box-shadow: inset 0 -1px rgba(0,0,0,0);
+            color: white;
+        }
     }
-  }
 
-  //The current menu item
-  &.current-menu-item a{
-    background: $p_menu_current;
-
-    &:hover {
-      //When hovering on the current menu item
-      background: $p_menu_hover ;
+    //The current menu item
+    .current-menu-item a {
+        background: $p_menu_current;
+        color: darken($p_menu_current, 40%);
+    
+        &:hover {
+            //When hovering on the current menu item
+            background: $p_menu_hover;
+            color: white;
+        }
     }
-  }
 }
 
 // ==========================================================================
 // Footer menu Buttons
 // ==========================================================================
 
-.footer-menu-buttons {
+.footer-menu {
 
   a {
 
@@ -83,14 +85,14 @@ a {
   }
 
   //The current menu item
-  &.current-menu-item a{
+  .current-menu-item a{
     background: $footer_menu_background_current;
     color: $footer_menu_text_current;
 
     &:hover {
       //When hovering on the current menu item
       background: $footer_menu_background_hover;
-      color: $footer_menu_text_hover;
+      color: $footer_menu_text_current;
     }
   }
 }

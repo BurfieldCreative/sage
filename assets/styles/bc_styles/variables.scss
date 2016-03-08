@@ -123,11 +123,14 @@ $p_menu_current:                            orange;
 $footer-background:                                         #279bb2;
 $sub-footer-background:                                     #282828;
 
+$footer-background-text-color:                              darken($footer-background, 20%);
+
+
 //footer menu link colors
 $footer_menu_background_color:                              transparent;
 $footer_menu_text_color:                                    white;
 
-$footer_menu_background_hover:                              darken($footer-background, 14%);
+$footer_menu_background_hover:                              darken($footer-background, 20%);
 $footer_menu_text_hover:                                    white;
 
 $footer_menu_background_current:                            darken($footer-background, 10%);

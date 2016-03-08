@@ -2,14 +2,21 @@
 //Footer Styling
 // ==========================================================================
 footer.footer {
-  background: $footer-background;
-  clear: both;
-  overflow: hidden;
-  margin-top: $grid-gutter*2;
+    background: $footer-background;
+    color: $footer-background-text-color;
+    clear: both;
+    overflow: hidden;
+    margin-top: $grid-gutter*2;
+    a {
+        color: $footer_menu_text_color;
+        &:hover {
+            color: $footer_menu_text_hover;
+        }
+    }
 }
 
 //Footer buttons and menus can be found in options/buttons and options/menus
 .sub-footer {
-  background: $sub-footer-background;
-  color: white;
+    background: $sub-footer-background;
+    color: white;
 }

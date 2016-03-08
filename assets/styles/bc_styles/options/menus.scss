@@ -2,41 +2,14 @@
 //Header menu
 // ==========================================================================
 .nav-header {
-  float: right;
-
-  ul {
-    padding: 0;
-    margin: 30px 0 0  0;
-
-    li {
-      float: left;
-      list-style: none;
-      @extend .header-menu-buttons;
-    }
-  }
+    @extend .header-menu-buttons;
 }
 
 // ==========================================================================
 //Footer menu
 // ==========================================================================
 .nav-footer {
-  margin: $grid-gutter*2 auto;
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-
-   @include breakpoint(medium) {
-     margin-left: -10px;
-   }
-
-    li {
-      float: left;
-      list-style: none;
-      @extend .footer-menu-buttons;
-    }
-  }
+    @extend .footer-menu-buttons;
 }
 
 // ==========================================================================
