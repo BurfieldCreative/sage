@@ -1,8 +1,11 @@
 <footer class="footer">
     
     <div class="container row island">
-        <div class='address col-12'>
+        <div class='address col-12 col-6-tablet'>
             <?php get_template_part( 'templates/vcard' ); ?>
+        </div>
+        <div class='address col-12 col-6-tablet'>
+            <?php get_template_part( 'templates/social-links' ); ?>
         </div>
     </div>
     
