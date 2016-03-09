@@ -10,7 +10,7 @@
 	$site_name = get_bloginfo( 'name' );
 	$site_name_filter = apply_filters('the_title', $site_name);
 ?>
-<ul class="social-list list-inline right">
+<ul class="social-list list-inline">
 
     <?php foreach ( $social_accounts AS $network => $account ) : ?>
 
