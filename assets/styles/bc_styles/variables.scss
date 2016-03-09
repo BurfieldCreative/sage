@@ -97,7 +97,7 @@ $scolor:                                        #279bb2;
 $sitewideLinks:                                 #cd5c5c;
 
 // Colors
-$headerbackground:                                 #191818;
+
 
 //hamburger
 $hamburgerHeight:                                   25px;
@@ -112,9 +112,18 @@ main img {
 // ==========================================================================
 // Primary Menu
 // ==========================================================================
-$p_menu:                                    red;
-$p_menu_hover:                              blue;
-$p_menu_current:                            orange;
+//Header background colours
+$headerbackground:                                          #191818;
+
+//Header menu link colors
+$header_menu_background_color:                              transparent;
+$header_menu_text_color:                                    white;
+
+$header_menu_background_hover:                              #26af86;
+$header_menu_text_hover:                                    white;
+
+$header_menu_background_current:                            #279bb2;
+$header_menu_text_current:                                  white;
 
 // ==========================================================================
 // Footer section
