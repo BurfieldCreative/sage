@@ -111,9 +111,9 @@ body {
 
 .nav-off-canvas-top {
 	@extend .nav-off-canvas;
-	left: 0;
-	right: auto;
-	transform: translate3d(-500px, -100%, 0);
+	right: 0;
+	left: auto;
+	transform: translate3d(500px, -100%, 0);
 	//transition-delay: 0.5s;
 
 	&.open {
@@ -121,7 +121,7 @@ body {
 		& ~ footer,
 		& ~ header,
 		& ~ .wrap.container{
-			transform: translate3d(300px, 0, 0);
+			transform: translate3d(-300px, 0, 0);
 			transition: all 0.5s;
 		}
 	}
