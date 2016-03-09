@@ -12,7 +12,7 @@ $current_term_id = ( isset( $current_queried_term->term_id )  ) ? $current_queri
 ?>
 
 <?php if( false != $tag_list ) : ?>
-<aside class="sidebar sidebar--nav-<?php echo sanitize_title($section_title); ?>">
+<aside class="sidebar--nav-<?php echo sanitize_title($section_title); ?>">
 
     <ul class="side-nav list-unstyled">
 

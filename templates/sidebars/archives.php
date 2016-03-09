@@ -9,7 +9,7 @@ $section_title = 'Archives';
 ?>
 
 <?php if( $archives_list ) : ?>
-<aside class="sidebar sidebar--nav-<?php echo sanitize_title($section_title); ?>">
+<aside class="sidebar--nav-<?php echo sanitize_title($section_title); ?>">
 
     <ul class="side-nav list-unstyled">
 
