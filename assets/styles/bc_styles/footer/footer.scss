@@ -6,7 +6,6 @@ footer.footer {
     color: $footer-background-text-color;
     clear: both;
     overflow: hidden;
-    margin-top: $grid-gutter*2;
     a {
         color: $footer_menu_text_color;
         &:hover {
@@ -19,4 +18,25 @@ footer.footer {
 .sub-footer {
     background: $sub-footer-background;
     color: white;
+}
+
+
+footer .social-list  {
+  margin-top: -$grid-gutter/3;
+
+  li {
+    padding: $grid-gutter/3;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    color: $footer-background-text-color;
+    transition: color 0.3s;
+    &:hover {
+      color: $footer_menu_background_hover;
+      transition: color 0.3s ease;
+    }
+  }
 }

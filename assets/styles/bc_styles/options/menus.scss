@@ -2,34 +2,22 @@
 //Header menu
 // ==========================================================================
 .nav-header {
-    @extend .header-menu-buttons;
+  @extend .header-menu-buttons;
 }
 
 // ==========================================================================
 //Footer menu
 // ==========================================================================
 .nav-footer {
-    @extend .footer-menu-buttons;
+  @extend .footer-menu-buttons;
 }
 
 // ==========================================================================
 //Slideout mobile menu
 // ==========================================================================
-.bc-menu {
-  background: #282828;
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      margin-bottom: 0;
-
-      a {
-      	@extend .mobile-menu-buttons;
-      }
-    }
-  }
+.mobile-menu{
+  background: $mobile_menubackground;
+  @extend .mobile-menu-buttons;
 }
 
 // ==========================================================================

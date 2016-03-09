@@ -1,9 +1,9 @@
 // ==========================================================================
 //These need to be the same color for the mobile menus to work
 // ==========================================================================
-#main-content,
-.bc-content {
+.wrap.container {
   background: white;
+  padding-bottom: $grid-gutter*3;
 }
 
 // ==========================================================================
