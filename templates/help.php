@@ -310,6 +310,10 @@
 </div>
 
 
+<hr></hr>
+<h1 style="text-align: center;">Site Settings</h1>
+
+
 <?php
 // ====================================================================================================================================================
 // Menus
@@ -317,7 +321,7 @@
 ?>
 
 
-<h2 style="text-align: center;">Menus</h2>
+<h2 style="text-align: center;">Mobile Menus</h2>
 <ol>
 	<li>To alter the menu to a different one open templates/base.php and set the variable at the top of the page to an integer available options are, 1 - 8</li>
 	<li>To set the height or color or the hamburger go to variables.scss set them first followed by menu.scss to overide settings or tweak lastly in menu-animations at the bottom</li>
@@ -338,3 +342,17 @@
 	<li>To add advanced custom fields open composer.json at the root and add to the extra installer paths line 45ish</li>
 	<li>Then run composer update</li>
 </ol>
+
+
+<?php
+// ====================================================================================================================================================
+// Adding Ico fonts
+// ====================================================================================================================================================
+?>
+
+
+
+<h2 style="text-align: center;">Adding Icon fonts using icomoon</h2>
+<ul>
+	<li>To add icomoon fonts run <code>gulp fonts</code> inside sage root</li>
+</ul>
