@@ -15,7 +15,7 @@ use Roots\Sage\Wrapper;
 
     <!--Mobile menu hidden on desktop-->
     <?php /** AVAILABLE OPTIONS .nav-off-canvas-above-right, .nav-off-canvas-above-left .nav-off-canvas-left, .nav-off-canvas-right, .nav-off-canvas-top **/ ?>
-    <nav class="mobile-menu nav-off-canvas-top" >
+    <nav class="mobile-menu nav-off-canvas-right" >
         <?php
         if ( has_nav_menu( 'primary_navigation' ) ) :
 
