@@ -1,9 +1,9 @@
 <div class="vcard" itemscope itemtype="http://schema.org/Organization">
 
-    <?php $name 	= get_bloginfo( 'name' ); ?>
+    <?php $name = get_bloginfo( 'name' ); ?>
 	<div itemprop="name"><?php echo $name; ?></div>
 	
-	<?php $description 	= get_bloginfo( 'description' ); ?>
+	<?php $description = get_bloginfo( 'description' ); ?>
 	<div class="vh" itemprop="description"><?php echo ($description !== "Just another WordPress site") ? $description : ''?></div>
 
 	<?php

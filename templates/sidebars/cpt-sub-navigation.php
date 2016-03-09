@@ -20,7 +20,7 @@ $section_title = $pt_obj->labels->name;
 ?>
 
 <?php if( $list_pages ) : ?>
-<aside class="sidebar sidebar--nav-<?php echo $pt_obj->name; ?>">
+<aside class="sidebar--nav-<?php echo $pt_obj->name; ?>">
 
 	<ul class="side-nav list-unstyled">
 

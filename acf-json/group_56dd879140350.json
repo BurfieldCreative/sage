@@ -100,8 +100,8 @@
         },
         {
             "key": "field_56dd889bcc7b8",
-            "label": "Google+ Company Profile",
-            "name": "google+_company_profile",
+            "label": "GooglePlus Profile",
+            "name": "googleplus_profile",
             "type": "url",
             "instructions": "Enter your Google+ Company Profile url. Used throughout the website.",
             "required": 0,
@@ -132,5 +132,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1457359047
+    "modified": 1457525860
 }
