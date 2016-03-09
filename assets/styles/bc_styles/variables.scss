@@ -110,6 +110,22 @@ main img {
 }
 
 // ==========================================================================
+// Mobile Menu
+// ==========================================================================
+//Header background colours
+$mobile_menubackground:                                          #282828;
+
+//Header menu link colors
+$mobile_menu_background_color:                              transparent;
+$mobile_menu_text_color:                                    white;
+
+$mobile_menu_background_hover:                              #26af86;
+$mobile_menu_text_hover:                                    white;
+
+$mobile_menu_background_current:                            #279bb2;
+$mobile_menu_text_current:                                  white;
+
+// ==========================================================================
 // Primary Menu
 // ==========================================================================
 //Header background colours

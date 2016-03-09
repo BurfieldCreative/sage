@@ -98,15 +98,28 @@
     });
 
     // Mobile menu button
-    $('#mobile-menu-button').click(function(){
-      if(!$('#bc-wrapper').hasClass('bc-menu-open')) {
-        $('#bc-wrapper').addClass('bc-menu-open');
-        $('#mobile-menu-button').addClass('active');
+    $('#mobile-menu-button').click(function(event){
+      event.stopPropagation();
+      if(!$(this).hasClass('open')) {
+        $('#mobile-menu-button, .mobile-menu').addClass('open');
       } else {
-        $('#bc-wrapper').removeClass('bc-menu-open');
-        $('#mobile-menu-button').removeClass('active');
+        $('#mobile-menu-button, .mobile-menu').removeClass('open');
       }
     });
+
+
+    $('.mobile-menu').click(function(event){
+       event.stopPropagation();
+    });
+
+    $('html').click(function() {
+      if($('.mobile-menu').hasClass('open')) {
+        $('.mobile-menu, #mobile-menu-button').removeClass('open');
+      }
+    });
+
+
+
 
 
 })(jQuery); // Fully reference jQuery after this point.
