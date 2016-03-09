@@ -95,9 +95,10 @@ function bc_get_protected_name_query_obj( $protected_page, $post_type = 'page' )
     return false;
 }
 
-// Affords us the ability to assign a specific template to any CMS page with a protected name.
-// Takes some of the unpredictably out of WPs occasionally erratic templating behaviour,
-// and allows us to keep a tidy ship.
+/**
+ * Automatio tempalte loading for posts that have a protected name and 
+ * a matching template file in the custom directory
+ */
 function site_create_custom_templating( $template ) {
 
 	global $post;
