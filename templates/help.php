@@ -144,11 +144,13 @@
 
       <div class="col-12 col-4-tablet listing flex">
           <div class="listing-inner">
+            
+            <?php if( false != has_post_thumbnail() ) : ?>
             <div class="listing-image">
-
-              <?php get_template_part( 'templates/images/featured-image'); ?>
-
+            <?php get_template_part( 'templates/images/featured-image'); ?>
             </div>
+            <?php endif; ?>
+            
             <div class="listing-text">
               <header>
 
@@ -202,11 +204,13 @@
 
       <div class="col-12 col-6-tablet col-6-desktop listing flex">
           <div class="listing-inner">
-            <div class="listing-image ">
-
-              <?php get_template_part( 'templates/images/featured-image'); ?>
-
+            
+            <?php if( false != has_post_thumbnail() ) : ?>
+            <div class="listing-image">
+            <?php get_template_part( 'templates/images/featured-image'); ?>
             </div>
+            <?php endif; ?>
+            
             <div class="listing-text">
               <header>
 
@@ -280,7 +284,7 @@
 
 		<?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 			<!--Check if thumbnail exists-->
-			<?php if ( has_post_thumbnail() ):?>
+			<?php if ( false != has_post_thumbnail() ):?>
 
 				<div class="slide">
 					<?php get_template_part( 'templates/images/featured-image'); ?>
@@ -297,7 +301,7 @@
 
 		<?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 			<!--Check if thumbnail exists-->
-			<?php if ( has_post_thumbnail() ):?>
+			<?php if ( false != has_post_thumbnail() ):?>
 
 				<div class="slide">
 					<?php get_template_part( 'templates/images/featured-image'); ?>
