@@ -87,8 +87,12 @@ function bc_get_protected_name_query_obj( $protected_page, $post_type = 'page' )
         ),
     );
     $protect_name_query = new WP_Query( $args );
-
-	return $protect_name_query = new WP_Query( $args );;
+    if ( false != $protect_name_query->have_posts() )
+    {
+        return $protect_name_query;
+    }
+    
+    return false;
 }
 
 // Affords us the ability to assign a specific template to any CMS page with a protected name.
@@ -98,17 +102,17 @@ function site_create_custom_templating( $template ) {
 
 	global $post;
 
-	$protected = bc_get_protected_name_query_obj( $post->post_title, $post->post_type );
-
-	if(!empty($protected->post)) {
-
-		$new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($post->post_title).'.php' ) );
-
- 		if ( false != $new_template ) {
-			return $new_template ;
-		}
-
-	}
+    $protected = bc_get_protected_name_query_obj( $post->post_title, $post->post_type );
+    
+    if( false != $protected ) :
+        
+        $new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($protected->post->post_title).'.php' ) );
+        
+        if ( false != $new_template ) :
+            return $new_template ;
+        endif;
+    
+    endif;
 
     return $template;
 }
