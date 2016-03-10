@@ -102,19 +102,24 @@ function bc_get_protected_name_query_obj( $protected_page, $post_type = 'page' )
 function site_create_custom_templating( $template ) {
 
 	global $post;
-
-    $protected = bc_get_protected_name_query_obj( $post->post_title, $post->post_type );
     
-    if( false != $protected ) :
+    if( false != $post ) {
         
-        $new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($protected->post->post_title).'.php' ) );
+        $protected = bc_get_protected_name_query_obj( $post->post_title, $post->post_type );
+    
+        if( false != $protected ) :
+            
+            $new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($protected->post->post_title).'.php' ) );
+            
+            if ( false != $new_template ) :
+                return $new_template ;
+            endif;
         
-        if ( false != $new_template ) :
-            return $new_template ;
         endif;
-    
-    endif;
 
+            
+    }
+    
     return $template;
 }
 add_action( 'template_include', 'site_create_custom_templating' );
