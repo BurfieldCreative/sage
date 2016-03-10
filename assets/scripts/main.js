@@ -83,9 +83,13 @@
     $('.slider').slick({
      slidesToShow: 1,
      slidesToScroll: 1,
-     arrows: false,
+     arrows: true,
      fade: true,
-     asNavFor: '.slider-nav'
+     asNavFor: '.slider-nav',
+     dots: true,
+     speed: 500,
+     autoplay: true,
+     autoplaySpeed: 10000,
     });
 
     $('.slider-nav').slick({
@@ -117,9 +121,6 @@
         $('.mobile-menu, #mobile-menu-button').removeClass('open');
       }
     });
-
-
-
 
 
 })(jQuery); // Fully reference jQuery after this point.
