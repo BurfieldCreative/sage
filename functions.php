@@ -25,6 +25,7 @@ $sage_includes = [
   'lib/bc/bc-is.php',                       // Custom bool functions for state checking -> bc_is_blog_page()
   'lib/bc/bc-protected-name.php',           // Protected name function
   'lib/bc/bc-query-controller.php',         // Control all queries
+  'lib/bc/bc-sidebar-display.php',          // Block sidebars
   'lib/bc/bc-wp-core.php',                  // Custom tweaks on wordpress
   
   /**

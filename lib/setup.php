@@ -83,13 +83,21 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  */
 function display_sidebar() {
   static $display;
-
+  
+  global $post;
+  
   isset($display) || $display = !in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+    
+    ( is_page() && (false == bc_has_children() && false == $post->post_parent )),
+    is_post_type_archive(),
+    is_search(),
+    !have_posts(), 
+    
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
