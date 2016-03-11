@@ -12,8 +12,7 @@
     		$data['slide_content']     = get_sub_field('slide_content');
     		
     		$data['cta_text']          = get_sub_field('cta_text');
-            $data['cta_internal_link'] = get_sub_field('cta_internal_link');
-            $data['cta_external_url']  = get_sub_field('cta_external_url');
+            $data['cta_link']          = get_sub_field('cta_link');
     		?>
     		
     		<div>
@@ -29,27 +28,30 @@
                 
                 <div class="container">
                     
-                    <?php if( false != $data['slide_title'] ): ?>
-                        <h2><?php echo apply_filters('the_title',$data['slide_title']); ?></h2>
-                    <?php endif; ?>
-                    <?php if( false != $data['slide_content'] ): ?>
-                        <?php echo apply_filters('the_content',$data['slide_content']); ?>
+                    
+                    <?php if( false != $data['slide_content'] || false != $data['slide_title'] ): ?>
+                    <div class="carousel-content">
+    
+                        <?php if( false != $data['slide_title'] ): ?>
+                            <h2><?php echo apply_filters('the_title',$data['slide_title']); ?></h2>
+                        <?php endif; ?>
+        	            
+        	            <?php if( false != $data['slide_content'] ): ?>
+        	                <?php echo apply_filters( 'the_content', $data['slide_content'] ); ?>
+                        <?php endif; ?>
+                    
+                    </div>
                     <?php endif; ?>
                     
                     
-                    <?php if( false != $data['cta_internal_link'] ): ?>
+                    <?php if( false != $data['cta_link'] ): ?>
 
-                        <a class="button" href="<?php echo esc_url($data['cta_internal_link']); ?>">
+                        <a class="button" href="<?php echo esc_url($data['cta_link']); ?>">
                             <span><?php echo ( false != $data['cta_text'] ) ? $data['cta_text'] : "Read More"; ?></span>
                         </a>
-                    
-                    <?php elseif( false != $data['cta_external_url'] ): ?>
-        
-                        <a class="button" href="<?php echo esc_url($data['cta_external_url']); ?>">
-                            <span><?php echo ( false != $data['cta_text'] ) ? $data['cta_text'] : "Read More"; ?></span>
-                        </a>
-        
+                        
                     <?php endif; ?>
+    				                    
         
                 </div>
                 

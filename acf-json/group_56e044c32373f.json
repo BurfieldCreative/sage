@@ -107,10 +107,10 @@
                 },
                 {
                     "key": "field_56e048e40ba65",
-                    "label": "CTA Internal Link",
-                    "name": "cta_internal_link",
+                    "label": "CTA Link",
+                    "name": "cta_link",
                     "type": "page_link",
-                    "instructions": "The \u2018Read More\u2019 destination if internal",
+                    "instructions": "The \u2018Read More\u2019 destination",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -122,22 +122,6 @@
                     "taxonomy": [],
                     "allow_null": 0,
                     "multiple": 0
-                },
-                {
-                    "key": "field_56e048fb0ba66",
-                    "label": "CTA External URL",
-                    "name": "cta_external_url",
-                    "type": "url",
-                    "instructions": "The \u2018Read More\u2019 destination if external",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": 33,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
                 }
             ]
         }
@@ -159,5 +143,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1457608446
+    "modified": 1457689194
 }

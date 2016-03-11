@@ -2,38 +2,51 @@
 	<div class="slider-container animate">
 		<article class="slider island-bottom">
 
-		<?php while( have_rows('slider_group') ): the_row();
+		<?php while( have_rows('slider_group') ): the_row(); ?>
 
-	        $title = get_sub_field('slide_title');
-			$image = get_sub_field('slide_image');
-			$content = get_sub_field('slide_content');
-			$linktitle = get_sub_field('cta_text');
-	        $link_internal = get_sub_field('cta_internal_link');
-	        $link_external = get_sub_field('cta_external_url');
-			?>
-
-
+	        <?php
+            $data['slide_image']    = get_sub_field('slide_image');
+            
+            $data['slide_title']    = get_sub_field('slide_title');
+    		$data['slide_content']  = get_sub_field('slide_content');
+    		
+    		$data['cta_text']       = get_sub_field('cta_text');
+            $data['cta_link']       = get_sub_field('cta_link');
+    		?>
 
 			<li class="slide">
 
-	            <?php //include locate_template( 'templates/images/carousel-fullwidth-image.php' ); ?>
+                
+                <?php
+                $image['id']            = $data['slide_image']['id'];
+                $image['required_size'] = 'xlarge';                
+                $image['attach']        = wp_get_attachment_image($image['id'], $image['required_size'], false, false );                
+                ?>                
+                <?php echo $image['attach']; ?>
 
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                
+                <?php if( false != $data['slide_content'] || false != $data['slide_title'] ): ?>
+                <div class="carousel-content">
 
+                    <?php if( false != $data['slide_title'] ): ?>
+                        <h2><?php echo apply_filters('the_title',$data['slide_title']); ?></h2>
+                    <?php endif; ?>
+    	            
+    	            <?php if( false != $data['slide_content'] ): ?>
+    	                <?php echo apply_filters( 'the_content', $data['slide_content'] ); ?>
+                    <?php endif; ?>
+                
+                </div>
+                <?php endif; ?>
+                
+                
+                <?php if( false != $data['cta_link'] ): ?>
 
-	            <?php if( $content ): ?>
-	                <div class="carousel-content">
-	                    <?php echo $content; ?>
-	                </div>
-	            <?php endif; ?>
-
-				<?php if( $link_external ): ?>
-					<a class="button carousel" href="<?php echo $link_external; ?>"><?php echo $linktitle; ?></a>
-				<?php endif; ?>
-
-				<?php if( $link_internal ): ?>
-					<a class="button carousel" href="<?php echo $link_internal; ?>"><?php echo $linktitle; ?></a>
-				<?php endif; ?>
+                    <a class="button" href="<?php echo esc_url($data['cta_link']); ?>">
+                        <span><?php echo ( false != $data['cta_text'] ) ? $data['cta_text'] : "Read More"; ?></span>
+                    </a>
+                    
+                <?php endif; ?>
 
 			</li>
 
