@@ -2,7 +2,8 @@
 <?php
   $articleclasses = array(
     'col-12',
-    'col-4-tablet',
+    'col-6-tablet',
+    'col-4-desktop',
     'vert-listings'
    );
 ?>
