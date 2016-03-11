@@ -1,10 +1,7 @@
 <?php
-$attachment_id = get_post_thumbnail_id( $post->ID );
-$img_src = wp_get_attachment_image_url( $attachment_id, 'medium' );
-$img_srcset = wp_get_attachment_image_srcset( $attachment_id, 'medium' );
-$featured_image_alt = trim( strip_tags( get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ) ) );
+$image['id']            = get_post_thumbnail_id( $post->ID );
+$image['required_size'] = 'large';                
+$image['attach']        = wp_get_attachment_image($image['id'], $image['required_size'], false, false );                
 ?>
-<img src="<?php echo esc_url( $img_src ); ?>"
-     srcset="<?php echo esc_attr( $img_srcset ); ?>"
-     sizes="(max-width: 50em) 87vw, 680px"
-     alt="<?php echo esc_attr( $featured_image_alt ); ?>" >
+
+<?php echo $image['attach']; ?>

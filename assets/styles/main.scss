@@ -6,7 +6,7 @@
 
 @import "bc_styles/icons.scss";
 
-@import "../../bower_components/base/src/scss/style.scss"; //TODO pull using gulp and place main.scss after so variables work
+@import "./bower_components/base/src/scss/style.scss"; //TODO pull using gulp and place main.scss after so variables work
 
 @import "bc_styles/variables.scss";
 @import "bc_styles/mixins.scss";

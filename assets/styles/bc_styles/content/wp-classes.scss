@@ -13,17 +13,20 @@
 main.main {
     img {
         @extend .img-fluid;
+        height: auto;
     }
 }
 
 .alignnone,
 .aligncenter {
     @extend .img-fluid;
+    height: auto;
 }
 
 .alignleft,
 .alignright {
     @extend .img-fluid;
+    height: auto;
 	margin-bottom: $grid-gutter;
 }
 

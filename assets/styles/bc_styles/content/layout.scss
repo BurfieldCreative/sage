@@ -1,9 +1,11 @@
 // ==========================================================================
 //These need to be the same color for the mobile menus to work
 // ==========================================================================
+.main-container {
+    @extend .container;
+}
 .wrap.container {
   background: white;
-  padding-bottom: $grid-gutter*3;
 }
 
 // ==========================================================================
@@ -11,30 +13,26 @@
 // ==========================================================================
 .container {
 
-  @include breakpoint(small) {
-    max-width: $breakpoint-desktop;
-    width: auto;
-   }
 
-  @include breakpoint(medium) {
-    max-width: $breakpoint-hd;
-    width: auto;
-   }
 }
 
 // ==========================================================================
 //Layout settings
 // ==========================================================================
 main {
-  @extend .col-12;
+    @extend .col-12;
+    margin-top: $grid-gutter*3;
+    margin-bottom: $grid-gutter*3;
+}
+.sidebar {
+    @extend .col-12;
+    margin-top: $grid-gutter*3;
+    margin-bottom: $grid-gutter*3;
 }
 
 body.sidebar-primary {
 
-  .sidebar {
-    margin-top: $grid-gutter*3;
-    margin-bottom: $grid-gutter*3;
-    
+  .sidebar {    
     @extend .col-12;
 
     @include breakpoint(small) {
@@ -50,8 +48,6 @@ body.sidebar-primary {
     }
   }
   main {
-    margin-top: $grid-gutter*3;
-    margin-bottom: $grid-gutter*3;
     
     @extend .col-12;
 

@@ -59,29 +59,29 @@ use Roots\Sage\Wrapper;
          */
         ?>
         <?php get_template_part('templates/carousel/carousel'); ?>
-
-
-        <div class="wrap container row" role="document">
-
+        
+        <div class="main-container">
             <?php
             /**
              * DEBUG
              */
             ?>
-            <?php echo '<pre class="container">Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
-
-            <main class="main">
-                <?php include Wrapper\template_path(); ?>
-            </main><!-- /.main -->
-
-            <?php if (Setup\display_sidebar()) : ?>
-            <aside class="sidebar">
-                <?php include Wrapper\sidebar_path(); ?>
-            </aside><!-- /.sidebar -->
-            <?php endif; ?>
-
-        </div><!-- /.wrap -->
-
+            <?php echo '<pre>Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
+            
+            <div class="wrap row" role="document">
+            
+                <main class="main">
+                    <?php include Wrapper\template_path(); ?>
+                </main><!-- /.main -->
+    
+                <?php if (Setup\display_sidebar()) : ?>
+                <aside class="sidebar">
+                    <?php include Wrapper\sidebar_path(); ?>
+                </aside><!-- /.sidebar -->
+                <?php endif; ?>
+    
+            </div><!-- /.wrap -->
+        </div>
 
         <?php
             do_action('get_footer');
