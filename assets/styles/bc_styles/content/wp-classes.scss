@@ -1,0 +1,58 @@
+// ==========================================================================
+//
+// WordPress Generated Classes
+//
+// Description: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+//
+// ==========================================================================
+
+// ==========================================================================
+// Image Alignment
+// ==========================================================================
+
+main.main {
+    img {
+        @extend .img-fluid;
+    }
+}
+
+.alignnone,
+.aligncenter {
+    @extend .img-fluid;
+}
+
+.alignleft,
+.alignright {
+    @extend .img-fluid;
+	margin-bottom: $grid-gutter;
+}
+
+@include breakpoint(medium) {
+
+	// Only float if not on an extra small device
+	.alignleft {
+		@extend .img-left;
+	}
+
+	.alignright {
+		@extend .img-right;
+	}
+}
+
+// ==========================================================================
+// Captions
+// ==========================================================================
+
+.wp-caption {
+    .wp-caption-text {
+	    @extend pre;
+    }
+}
+	
+// ==========================================================================
+// Screen Reader
+// ==========================================================================
+
+.screen-reader-text {
+	@extend .sr;
+}
