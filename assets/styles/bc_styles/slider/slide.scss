@@ -188,6 +188,11 @@ ul.slick-dots {
   margin: $grid-gutter*2 0;
   padding: 0;
   text-align: center;
+  display: none !important;
+
+  @include breakpoint(small) {
+      display: block !important;
+  }
 
   li {
     list-style-type: none;
@@ -219,4 +224,87 @@ ul.slick-dots {
       font-size: $dotsSize;
     }
   }
+}
+
+// ==========================================================================
+//  Animate your slider
+// ==========================================================================
+@keyframes zoom {
+   from {
+       transform: scale(1.2,1.2);
+   }
+   to {
+        transform: scale(1,1);
+   }
+}
+
+.slider-container.animate {
+
+    overflow: hidden;
+    max-width: 100%;
+
+    .slick-slide {
+        img {
+            animation: none;
+            //resets the size back otherwise just keeps zooming
+            transform: scale(1);
+            width: 100%;
+        }
+
+        &.slick-active {
+
+            img  {
+            animation: zoom 30s;
+            animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+// ==========================================================================
+// Slider content
+// ==========================================================================
+
+
+.carousel-content {
+    position: relative;
+    z-index: 9;
+    background: #282828;
+    padding: $grid-gutter;
+    text-align: center;
+    p {
+        margin: 0;
+        color: white;
+    }
+
+    @include breakpoint(small) {
+        background: rgba(000,000,000,0.7);
+        position: absolute;
+        bottom: 90px;
+        left: $grid-gutter*2;
+        text-align: left;
+    }
+}
+
+.button.carousel {
+    background: #279bb2;
+    z-index: 9;
+    color: white;
+    transition: background 0.3s ease;
+    border: 0;
+    padding: $grid-gutter;
+    text-align: center;
+    position: relative;
+
+    &:hover {
+        background: rgba(000,000,000,0.8);
+    }
+
+    @include breakpoint(small) {
+        position: absolute;
+        text-align: left;
+        bottom: $grid-gutter*2;
+        right: $grid-gutter*2;
+    }
+
 }
