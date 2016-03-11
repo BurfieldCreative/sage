@@ -80,6 +80,8 @@
   //--------------------------------------------
 
   // Slideshow using http://kenwheeler.github.io/slick/
+    $('.carousel').slick();
+    
     $('.slider').slick({
      slidesToShow: 1,
      slidesToScroll: 1,
