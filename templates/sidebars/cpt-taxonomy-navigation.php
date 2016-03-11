@@ -13,7 +13,7 @@ $section_title = $custom_taxonomy->labels->name;
 ?>
 
 <?php if( false != $custom_terms ) : ?>
-<aside class="sidebar--nav-<?php echo sanitize_title($section_title); ?>">
+<aside class="island-bottom sidebar--nav-<?php echo sanitize_title($section_title); ?>">
 
     <ul class="side-nav list-unstyled">
 
