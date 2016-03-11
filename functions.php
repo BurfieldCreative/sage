@@ -26,6 +26,7 @@ $sage_includes = [
   'lib/bc/bc-protected-name.php',           // Protected name function
   'lib/bc/bc-query-controller.php',         // Control all queries
   'lib/bc/bc-sidebar-display.php',          // Block sidebars
+  'lib/bc/bc-set-images.php',               // Set responsive imageries
   'lib/bc/bc-wp-core.php',                  // Custom tweaks on wordpress
   
   /**
