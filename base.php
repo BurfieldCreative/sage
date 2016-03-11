@@ -52,7 +52,14 @@ use Roots\Sage\Wrapper;
             get_template_part('templates/header');
         ?>
 
-        <?php include('templates/carousel/carousel.php'); ?>
+        
+        <?php
+        /**
+         * Main Carousel
+         */
+        ?>
+        <?php get_template_part('templates/carousel/fullwidth'); ?>
+
 
         <div class="wrap container row" role="document">
 
