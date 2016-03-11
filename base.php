@@ -58,7 +58,7 @@ use Roots\Sage\Wrapper;
          * Main Carousel
          */
         ?>
-        <?php get_template_part('templates/carousel/fullwidth'); ?>
+        <?php get_template_part('templates/carousel/carousel'); ?>
 
 
         <div class="wrap container row" role="document">
