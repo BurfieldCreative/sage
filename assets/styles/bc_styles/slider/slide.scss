@@ -16,6 +16,7 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
+  margin-bottom: 30px;
 }
 
 .slick-list {
@@ -69,6 +70,7 @@
   float: left;
   height: 100%;
   min-height: 1px;
+  position: relative;
   [dir="rtl"] & {
     float: right;
   }
@@ -114,8 +116,8 @@
   border: 0;
   color: white;
   position: absolute;
-  left: 0;
-  top: -120%;
+  left: 0;;
+  top: calc(50% - 50px);
   z-index: 3;
   font-size: 0;
   padding: 0;
@@ -151,7 +153,7 @@
   color: white;
   position: absolute;
   right: 0;
-  top: -120%;
+  top: calc(50% - 50px);
   z-index: 3;
   font-size: 0;
   padding: 0;
@@ -185,13 +187,21 @@
 $dotsSize: 13px;
 
 ul.slick-dots {
-  margin: $grid-gutter*2 0;
   padding: 0;
   text-align: center;
   display: none !important;
 
   @include breakpoint(small) {
       display: block !important;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      height: $dotsSize + 6px;
+      margin: 0;
+      bottom: $grid-gutter;
+
   }
 
   li {
@@ -204,6 +214,7 @@ ul.slick-dots {
 
       button {
         @extend .icon-circle;
+        color: white;
       }
     }
   }
@@ -222,6 +233,7 @@ ul.slick-dots {
 
     &:before {
       font-size: $dotsSize;
+      color: white;
     }
   }
 }
@@ -238,24 +250,34 @@ ul.slick-dots {
    }
 }
 
-.slider-container.animate {
+.slider-container{
 
     overflow: hidden;
-    max-width: 100%;
+    width: auto;
+    //max-height: 70vh;
 
     .slick-slide {
         img {
             animation: none;
-            //resets the size back otherwise just keeps zooming
-            transform: scale(1);
             width: 100%;
+            height: auto;
         }
+    }
+    &.animate {
 
-        &.slick-active {
+        .slick-slide {
 
-            img  {
-            animation: zoom 30s;
-            animation-fill-mode: forwards;
+            img {
+                transform: scale(1);
+                //resets the size back otherwise just keeps zooming
+            }
+
+            &.slick-active {
+
+                img  {
+                animation: zoom 30s;
+                animation-fill-mode: forwards;
+                }
             }
         }
     }
@@ -272,7 +294,8 @@ ul.slick-dots {
     background: #282828;
     padding: $grid-gutter;
     text-align: center;
-    p {
+    p,
+    h2 {
         margin: 0;
         color: white;
     }
@@ -280,7 +303,7 @@ ul.slick-dots {
     @include breakpoint(small) {
         background: rgba(000,000,000,0.7);
         position: absolute;
-        bottom: 90px;
+        top: $grid-gutter*2;
         left: $grid-gutter*2;
         text-align: left;
     }
