@@ -1,5 +1,7 @@
 // ==========================================================================
 //These need to be the same color for the mobile menus to work
+// Use container-full to remove all padding on left and right
+// remove to make full width or extend on page basis ie body.front etc
 // ==========================================================================
 .main-container {
     @extend .container;
@@ -8,13 +10,6 @@
   background: white;
 }
 
-// ==========================================================================
-//Fully responsive rather then breakpoints OPTIONAL
-// ==========================================================================
-.container {
-
-
-}
 
 // ==========================================================================
 //Layout settings
@@ -32,7 +27,7 @@ main {
 
 body.sidebar-primary {
 
-  .sidebar {    
+  .sidebar {
     @extend .col-12;
 
     @include breakpoint(small) {
@@ -48,7 +43,7 @@ body.sidebar-primary {
     }
   }
   main {
-    
+
     @extend .col-12;
 
     @include breakpoint(small) {
