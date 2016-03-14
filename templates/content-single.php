@@ -1,4 +1,10 @@
 <?php while (have_posts()) : the_post(); ?>
+    <?php if( false != has_post_thumbnail() ) : ?>
+    <div class="listing-image">
+    <?php get_template_part( 'templates/images/featured-image'); ?>
+    </div>
+    <?php endif; ?>
+    
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>

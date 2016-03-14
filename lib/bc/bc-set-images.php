@@ -6,17 +6,6 @@
  *
  */
 
-//slider imagery/fullwidth uses
-add_image_size( 'xlarge', 1600 ); 
-
-function bc_custom_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'xlarge' => __( 'X Large' ),
-    ) );
-}
-add_filter( 'image_size_names_choose', 'bc_custom_sizes' );
-
-
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images
