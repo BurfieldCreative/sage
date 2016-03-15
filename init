@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "Installing sage-base-theme"
+
+rm -rf .git*            						&& \
+cd assets/                                      && \
+npm install                                     && \
+bower install                                    && \
+gulp font                                       && \
+gulp build                                      && \
+rm init
+
+echo "bc-base-theme successfully installed use gulp watch to watch files"

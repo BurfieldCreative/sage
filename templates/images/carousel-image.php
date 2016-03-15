@@ -1,6 +1,7 @@
 <?php
 //
 //This is intended for a full screen carousel
+//Be aware it gets slim above 1040px
 //
 ?>
 

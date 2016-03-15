@@ -38,6 +38,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 
   .listing-image {
+      img {
+          width: 100%;
+          height: auto;
+      }
   }
 
   .listing-text {
@@ -104,5 +108,5 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .navigation.pagination {
     .page-numbers {
         @extend .list-inline;
-    }    
+    }
 }
