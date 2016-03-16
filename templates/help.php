@@ -1,5 +1,15 @@
 <h1 style="text-align: center;">Burfield Help Page</h1>
+<p>
+	<strong>The template helper can also be reomved it's in base.php line 69</strong>
+</p>
+<p>
+	The slider above can be found in templates/carousel/carousel.php.
+	The styling is set in styles/bc_styles/slider/slide.scss to animate add animate to the outer container and you can tweak it as you like.
+</p>
 
+<p>
+	<strong>This help file can be removed from code it's in templates/custom-pages/home.php</strong>
+</p>
 
 <?php
 // ====================================================================================================================================================
@@ -99,13 +109,32 @@
 
 
 <h2 style="text-align: center;">Islands</h2>
-<p>Another useful trick are islands these can be found in mixins.scss</p>
-<ul>
-<li><code>island</code>Adds the <dfn>$gutterwidth*2</dfn> to top and bottom of div</li>
-<li><code>island-top</code>Adds the <dfn>$gutterwidth*2</dfn> to the top ONLY</li>
-<li><code>island-bottom</code>Adds the <dfn>$gutterwidth*2</dfn> to the bottom ONLY</li>
-<li><code>island-half</code>Adds the <dfn>$gutterwidth</dfn> to the top and bottom</li>
+<p>Another useful trick are islands these can be found in bc_styles/mixins.scss</p>
+<ul class='list-unstyled'>
+<li><span class="col-3"><code>island</code></span> <span class='col-9'>Adds the <dfn>$gutterwidth*2</dfn> padding to top and bottom of div</span></li>
+<li><span class="col-3"><code>island-top</code></span><span class='col-9'>Adds the <dfn>$gutterwidth*2</dfn> padding to the top ONLY</span></li>
+<li><span class="col-3"><code>island-bottom</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> padding to the bottom ONLY</span></li>
+<li><span class="col-3"><code>island-half</code></span><span class='col-9'> Adds the <dfn>$gutterwidth</dfn> padding to the top and bottom</span></li>
+<li><span class="col-3"><code>island-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to top and bottom of div</span></li>
+<li><span class="col-3"><code>island-top-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to the top ONLY</span></li>
+<li><span class="col-3"><code>island-bottom-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to the bottom ONLY</span></li>
+<li><span class="col-3"><code>island-half-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth</dfn> margin to the top and bottom</span></li>
+<li><span class="col-3"><code>full-width</code></span><span class='col-9'> Sets width: 100%</span></li>
 </ul>
+
+<div class="island">
+
+<h3 style="text-align: center;">Other helpers</h3>
+<p>Another useful trick are islands these can be found in bc_styles/mixins.scss</p>
+<ul>
+	<li><code>island-light</code>Sets a light background colour</li>
+	<li><code>island-dark</code>Sets a dark background colour</li>
+	<li><code>text-light</code>Sets a light colour to text</li>
+	<li><code>text-dark</code>Sets a dark colour to text</li>
+
+</ul>
+
+</div>
 
 
 	</br><hr></hr>
@@ -138,19 +167,19 @@
 
 <?php if ( $posts_obj->have_posts() ): ?>
 
-  <article class="vert-listings island flex flex-row flex-wrap">
+  <article class="vert-listings island">
 
     <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 
-      <div class="col-12 col-4-tablet listing flex">
-          <div class="listing-inner">
-            
+      <div class="col-12 col-4-tablet listing">
+          <div class="listing-inner" data-match-height="vert-listing">
+
             <?php if( false != has_post_thumbnail() ) : ?>
             <div class="listing-image">
             <?php get_template_part( 'templates/images/featured-image'); ?>
             </div>
             <?php endif; ?>
-            
+
             <div class="listing-text">
               <header>
 
@@ -171,6 +200,23 @@
 
 <?php
 // ====================================================================================================================================================
+// Equal Heights
+// ====================================================================================================================================================
+?>
+
+
+<h2 style="text-align: center;">Equal Heights</h2>
+<p>Add data-match-height="groupName" to anything you want equal</p>
+<pre>
+<-ul>
+	<-li data-match-height="groupName">test 1<-/li>
+	<-li data-match-height="groupName">test 2<-/li>
+	<-li data-match-height="groupName">test 3<-/li>
+<-/ul>
+</pre>
+<hr></hr>
+<?php
+// ====================================================================================================================================================
 // Horizontal listings
 // ====================================================================================================================================================
 ?>
@@ -178,8 +224,8 @@
 
 <h2 style="text-align: center;">Listings Horizontal</h2>
 <p>View the help.php, do a search for <code>Horizontal listings</code> to see an example of the actual working code including php  </p>
-<p><mark>Be aware</mark> that the images will need to be taller then content using this view and it's worth while checking on all devices as it's a fiddly bugger;</p>
-<p>The <strong>styling</strong> can be found in theme/assets/styles/content/content.scss</p>
+<p><mark>Be aware</mark> you have two choice either make sure your images are bigger then your text or like I have here position the image absolute this would mean cropping will occur, remove absolute image if needed and it's worth while checking on all devices as it's a fiddly bugger;</p>
+<p>The <strong>styling</strong> can be found in theme/assets/styles/content/content.scss under <code>Horizontal Listings</code></p>
 
 <?php
 
@@ -198,20 +244,20 @@
 
 <?php if ( $posts_obj->have_posts() ): ?>
 
-	<article class="hoz-listings island flex flex-row flex-wrap">
+	<article class="hoz-listings island">
 
     <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 
-      <div class="col-12 col-6-tablet col-6-desktop listing flex">
-          <div class="listing-inner">
-            
+      <div class="col-12 col-6-tablet col-6-desktop listing">
+          <div class="listing-inner"  data-match-height="hoz-listing">
+
             <?php if( false != has_post_thumbnail() ) : ?>
-            <div class="listing-image">
+            <div class="listing-image col-6 no-padding absolute-image"  data-match-height="img-listing">
             <?php get_template_part( 'templates/images/featured-image'); ?>
             </div>
             <?php endif; ?>
-            
-            <div class="listing-text">
+
+            <div class="listing-text col-6">
               <header>
 
                 <a href="<?php the_permalink(); ?>"><h2 class="no-margin" itemprop="headline"><?php the_title(); ?></h2></a>
@@ -229,24 +275,6 @@
 <?php endif; wp_reset_postdata(); ?>
 
 <hr></hr>
-
-<?php
-// ====================================================================================================================================================
-// Equal Heights
-// ====================================================================================================================================================
-?>
-
-
-<h2 style="text-align: center;">Equal Heights</h2>
-<p>Set <code>flex flex-row flex-wrap</code> to the outer container and simple flex on the inner</p>
-<p><code>hoz-listings</code> and <code>vert-listings</code> already have equal heights set these can be found in content.scss.</p>
-<pre>
-<-ul class='flex flex-row flex-wrap'>
-	<-li class='flex'>test 1<-/li>
-	<-li class='flex'>test 2<-/li>
-	<-li class='flex'>test 3<-/li>
-<-/ul>
-</pre>
 
 
 <?php
@@ -326,11 +354,9 @@
 
 
 <h2 style="text-align: center;">Mobile Menus</h2>
-<ol>
-	<li>To alter the menu to a different one open templates/base.php and set the variable at the top of the page to an integer available options are, 1 - 8</li>
-	<li>To set the height or color or the hamburger go to variables.scss set them first followed by menu.scss to overide settings or tweak lastly in menu-animations at the bottom</li>
-	<li>Edit all menu buttons in buttons.scss this includes header and footer menus</li>
-</ol>
+<p>
+	There are a few availble menus to swap and try out something new go to base.php and change the nav style to one of the available options
+</p>
 
 
 <?php
@@ -357,6 +383,6 @@
 
 
 <h2 style="text-align: center;">Adding Icon fonts using icomoon</h2>
-<ul>
-	<li>To add icomoon fonts run <code>gulp fonts</code> inside sage root</li>
-</ul>
+<p>
+	Icons are already added to update visit styles/bc_styles/icons
+</p>
