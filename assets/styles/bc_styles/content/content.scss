@@ -9,101 +9,76 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 //Vertical Listings
 // ==========================================================================
 .vert-listings {
-  @extend .flex;
 
-  @at-root {
-
-    .listing-wrapper {
-      @extend .flex;
-      @extend .flex-row;
-      @extend .flex-wrap;
-      margin-left: -$grid-gutter;
-      margin-right: -$grid-gutter;
+    a {
+        text-decoration: none;
     }
-  }
 
-  a {
-    text-decoration: none;
-  }
+    .listing {
+        overflow: hidden;
+        margin-bottom: $grid-gutter*2
+    }
 
-  .listing {
-    overflow: hidden;
-    margin-bottom: $grid-gutter*2
-  }
+    .listing-inner {
+        background: #DDDDDD;
+        border: solid 1px #BFBFBF;
+        border-bottom: solid 1px #A9A5A5;
+        overflow: hidden;
+    }
 
-  .listing-inner {
-    background: #DDDDDD;
-    border: solid 1px #BFBFBF;
-    border-bottom: solid 1px #A9A5A5;
-  }
+    .listing-image {
 
-  .listing-image {
-      img {
-          width: 100%;
-          height: auto;
-      }
-  }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 
-  .listing-text {
-    padding: $grid-gutter;
-    display: block;
-  }
+    .listing-text {
+        padding: $grid-gutter;
+        display: block;
+    }
 }
 
 // ==========================================================================
 //Horizontal Listings
 // ==========================================================================
 .hoz-listings {
-  @extend .flex;
 
-  @at-root {
-    .listing-wrapper {
-      @extend .flex;
-      @extend .flex-row;
-      @extend .flex-wrap;
-      margin-left: -$grid-gutter;
-      margin-right: -$grid-gutter;
+    a {
+        text-decoration: none;
     }
-  }
 
-  a {
-    text-decoration: none;
-  }
-
-  .listing {
-    overflow: hidden;
-    margin-bottom: $grid-gutter*2
-  }
-
-  .listing-inner {
-    background: #DDDDDD;
-    border: solid 1px #BFBFBF;
-    border-bottom: solid 1px #A9A5A5;
-  }
-
-  .listing-image {
-    float: left;
-    width: 100%;
-
-    @include breakpoint(medium) {
-      width: 50%;
+    .listing {
+        overflow: hidden;
+        margin-bottom: $grid-gutter*2
     }
-  }
 
-  .listing-text {
-    padding: $grid-gutter;
-    display: block;
-    float: left;
-    width: 100%;
-
-    @include breakpoint(medium) {
-      width: 50%;
+    .listing-inner {
+        background: #DDDDDD;
+        border: solid 1px #BFBFBF;
+        border-bottom: solid 1px #A9A5A5;
+        overflow: hidden;
     }
-  }
+
+    .listing-image {
+        overflow: hidden;
+    }
+
+    .listing-text {
+        padding: $grid-gutter;
+    }
+
+    .absolute-image img{
+        position: absolute;
+        height: 100%;
+        max-width: none;
+        width: auto;
+    }
 }
 
 // ==========================================================================
-//Horizontal Listings
+// Pagination
 // ==========================================================================
 .navigation.pagination {
     .page-numbers {

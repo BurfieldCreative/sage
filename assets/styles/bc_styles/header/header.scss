@@ -5,17 +5,16 @@ header.banner {
 
     background: $headerbackground;
     overflow: hidden;
-    
+
     .container {
-    
+
         @extend .flex;
         align-items: center;
-    
+
         .site-logo {
             display: block;
             float: left;
             margin: $grid-gutter 0;
         }
-    
     }
 }

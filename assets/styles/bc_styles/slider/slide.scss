@@ -3,181 +3,181 @@
 // ==========================================================================
 
 .slick-slider {
-  position: relative;
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-  margin-bottom: 30px;
+    position: relative;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    margin-bottom: 30px;
 }
 
 .slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
 
-  &:focus {
-    outline: none;
-  }
+    &:focus {
+        outline: none;
+    }
 
-  &.dragging {
-    cursor: pointer;
-    cursor: hand;
-  }
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
 }
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
 
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
 
-  &:after {
-    clear: both;
-  }
+    &:after {
+        clear: both;
+    }
 
-  .slick-loading & {
-    visibility: hidden;
-  }
+    .slick-loading & {
+        visibility: hidden;
+    }
 }
 
 .slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  position: relative;
-  [dir="rtl"] & {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    position: relative;
+    [dir="rtl"] & {
     float: right;
-  }
+    }
 
-  img {
-    display: block;
-  }
+    img {
+        display: block;
+    }
 
-  &.slick-loading img {
+    &.slick-loading img {
+        display: none;
+    }
+
     display: none;
-  }
 
-  display: none;
+    &.dragging img {
+        pointer-events: none;
+    }
 
-  &.dragging img {
-    pointer-events: none;
-  }
+    .slick-initialized & {
+        display: block;
+    }
 
-  .slick-initialized & {
-    display: block;
-  }
+    .slick-loading & {
+        visibility: hidden;
+    }
 
-  .slick-loading & {
-    visibility: hidden;
-  }
-
-  .slick-vertical & {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-  }
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
 }
 
 .slick-arrow.slick-hidden {
-  display: none;
+    display: none;
 }
 
 // ==========================================================================
 //Previous button
 // ==========================================================================
 .slick-prev {
-  background: rgba(000,000,000,0.2);
-  border: 0;
-  color: white;
-  position: absolute;
-  left: 0;;
-  top: calc(50% - 50px);
-  z-index: 3;
-  font-size: 0;
-  padding: 0;
-  height: 50px;
-  width: 50px;
-  line-height: 30px;
-  @extend .icon-arrow-left3;
-  @extend .icon-font;
-
-  &:before {
-    font-size: 30px;
+    background: rgba(000,000,000,0.2);
+    border: 0;
+    color: white;
     position: absolute;
-    top: 9px;
-    left: 8px;
-    opacity: 0.8;
-    transition: opacity 200ms ease;
-  }
-
-  &:hover {
+    left: 0;;
+    top: calc(50% - 50px);
+    z-index: 3;
+    font-size: 0;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    line-height: 30px;
+    @extend .icon-arrow-left3;
+    @extend .icon-font;
 
     &:before {
-      opacity: 1;
+        font-size: 30px;
+        position: absolute;
+        top: 9px;
+        left: 8px;
+        opacity: 0.8;
+        transition: opacity 200ms ease;
     }
-  }
+
+    &:hover {
+
+        &:before {
+            opacity: 1;
+        }
+    }
 }
 
 // ==========================================================================
 //Next button
 // ==========================================================================
 .slick-next {
-  background: rgba(000,000,000,0.2);
-  border: 0;
-  color: white;
-  position: absolute;
-  right: 0;
-  top: calc(50% - 50px);
-  z-index: 3;
-  font-size: 0;
-  padding: 0;
-  height: 50px;
-  width: 50px;
-  line-height: 30px;
-  @extend .icon-arrow-right3;
-  @extend .icon-font;
-
-  &:before {
-    font-size: 30px;
+    background: rgba(000,000,000,0.2);
+    border: 0;
+    color: white;
     position: absolute;
-    top: 9px;
-    right: 8px;
-    opacity: 0.8;
-    transition: opacity 200ms ease;
-  }
-
-  &:hover {
+    right: 0;
+    top: calc(50% - 50px);
+    z-index: 3;
+    font-size: 0;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    line-height: 30px;
+    @extend .icon-arrow-right3;
+    @extend .icon-font;
 
     &:before {
-      opacity: 1;
+        font-size: 30px;
+        position: absolute;
+        top: 9px;
+        right: 8px;
+        opacity: 0.8;
+        transition: opacity 200ms ease;
     }
-  }
+
+    &:hover {
+
+        &:before {
+              opacity: 1;
+        }
+    }
 }
 
 // ==========================================================================
@@ -187,67 +187,67 @@
 $dotsSize: 13px;
 
 ul.slick-dots {
-  padding: 0;
-  text-align: center;
-  display: none !important;
-
-  @include breakpoint(small) {
-      display: block !important;
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 2;
-      height: $dotsSize + 6px;
-      margin: 0;
-      bottom: $grid-gutter;
-
-  }
-
-  li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 0;
-    height: $dotsSize;
-
-    &.slick-active {
-
-      button {
-        @extend .icon-circle;
-        color: white;
-      }
-    }
-  }
-
-  button {
-    font-size: 0;
-    @extend .icon-circle2;
-    @extend .icon-font;
     padding: 0;
-    height: $dotsSize;
-    line-height: $dotsSize;
-    border: 0;
-    background: transparent;
-    float: left;
-    margin: 0 5px;
+    text-align: center;
+    display: none !important;
 
-    &:before {
-      font-size: $dotsSize;
-      color: white;
+    @include breakpoint(small) {
+        display: block !important;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        height: $dotsSize + 6px;
+        margin: 0;
+        bottom: $grid-gutter;
+
     }
-  }
+
+    li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0;
+        height: $dotsSize;
+
+        &.slick-active {
+
+            button {
+                @extend .icon-circle;
+                color: white;
+            }
+        }
+    }
+
+    button {
+        font-size: 0;
+        @extend .icon-circle2;
+        @extend .icon-font;
+        padding: 0;
+        height: $dotsSize;
+        line-height: $dotsSize;
+        border: 0;
+        background: transparent;
+        float: left;
+        margin: 0 5px;
+
+        &:before {
+          font-size: $dotsSize;
+          color: white;
+        }
+    }
 }
 
 // ==========================================================================
 //  Animate your slider
 // ==========================================================================
 @keyframes zoom {
-   from {
+    from {
        transform: scale(1.2,1.2);
-   }
-   to {
+    }
+    to {
         transform: scale(1,1);
-   }
+    }
 }
 
 .slider-container{
@@ -294,6 +294,7 @@ ul.slick-dots {
     background: #282828;
     padding: $grid-gutter;
     text-align: center;
+
     p,
     h2 {
         margin: 0;
@@ -329,5 +330,4 @@ ul.slick-dots {
         bottom: $grid-gutter*2;
         right: $grid-gutter*2;
     }
-
 }

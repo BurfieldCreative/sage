@@ -6,8 +6,9 @@
 .main-container {
     @extend .container;
 }
+
 .wrap.container {
-  background: white;
+    background: white;
 }
 
 
@@ -27,35 +28,36 @@ main {
 
 body.sidebar-primary {
 
-  .sidebar {
-    @extend .col-12;
+    .sidebar {
+        @extend .col-12;
 
-    @include breakpoint(small) {
-      @extend .col-4-tablet;
+        @include breakpoint(small) {
+            @extend .col-4-tablet;
+        }
+
+        @include breakpoint(medium) {
+            @extend .col-3-desktop;
+        }
+
+        @include breakpoint(medium) {
+            @extend .col-3-hd;
+        }
     }
 
-    @include breakpoint(medium) {
-      @extend .col-3-desktop;
-    }
-
-    @include breakpoint(medium) {
-      @extend .col-3-hd;
-    }
-  }
   main {
 
     @extend .col-12;
 
-    @include breakpoint(small) {
-      @extend .col-8-tablet;
-    }
+        @include breakpoint(small) {
+            @extend .col-8-tablet;
+        }
 
-    @include breakpoint(medium) {
-      @extend .col-9-desktop;
-    }
+        @include breakpoint(medium) {
+            @extend .col-9-desktop;
+        }
 
-    @include breakpoint(large) {
-      @extend .col-9-hd;
+        @include breakpoint(large) {
+            @extend .col-9-hd;
+        }
     }
-  }
 }

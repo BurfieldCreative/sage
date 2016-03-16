@@ -3,18 +3,22 @@
 // Custom Buttons
 // ==========================================================================
 .button {
-  line-height: normal;
-  padding:$grid-gutter/2 $grid-gutter;
-  text-decoration: none;
-  color: #363636;
-  display: block;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+    line-height: normal;
+    padding:$grid-gutter/2 $grid-gutter;
+    text-decoration: none;
+    color: #363636;
+    display: block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 
-  &:hover, &:active { text-decoration: none; }
-  &:hover { background: $pcolor; }
+    &:hover, &:active {
+        text-decoration: none;
+    }
 
+    &:hover {
+        background: $pcolor;
+    }
 }
 
 .button-primary {
@@ -114,22 +118,22 @@
     background: $mobile_menu_background_color;
     color: $mobile_menu_text_color;
 
-    &:hover {
-      background: $mobile_menu_background_hover;
-      box-shadow: inset 0 -1px rgba(0,0,0,0);
-      color: $mobile_menu_text_hover;
+        &:hover {
+            background: $mobile_menu_background_hover;
+            box-shadow: inset 0 -1px rgba(0,0,0,0);
+            color: $mobile_menu_text_hover;
+        }
     }
-  }
 
-  //The first li a
-  li:first-child a {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
-  }
+    //The first li a
+    li:first-child a {
+        box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+    }
 
-  //The current menu item
-  .current-menu-item a {
-    background: $mobile_menu_background_current;
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: $mobile_menu_text_current;
-  }
+    //The current menu item
+    .current-menu-item a {
+        background: $mobile_menu_background_current;
+        box-shadow: inset 0 -1px rgba(0,0,0,0);
+        color: $mobile_menu_text_current;
+    }
 }

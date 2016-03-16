@@ -1,5 +1,5 @@
 // ==========================================================================
-// Base – Variables copied from bower
+// Base – Variables copied from bower REMOVE DEFAULT TO USE
 // ==========================================================================
 
 // Global Typography
@@ -24,11 +24,11 @@ $font-900:                                      900 !default;
 
 // Headings
 $heading-font-family:                           sans-serif !default;
-$h1-font-size:                                  32 !default;
+$h1-font-size:                                  99;
 $h1-line-height:                                38 !default;
 $h1-font-weight:                                $font-400 !default;
 $h1-color:                                      #343434 !default;
-$h2-font-size:                                  26 !default;
+$h2-font-size:                                  58 !default;
 $h2-line-height:                                32 !default;
 $h2-font-weight:                                $font-400 !default;
 $h2-color:                                      #343434 !default;
@@ -128,17 +128,17 @@ $headerbackground:                                          #191818;
 $header_menu_background_color:                              transparent;
 $header_menu_text_color:                                    white;
 
-$header_menu_background_hover:                              #26af86;
-$header_menu_text_hover:                                    white;
+$header_menu_background_hover:                              lightgrey;
+$header_menu_text_hover:                                    #282828;
 
-$header_menu_background_current:                            #279bb2;
-$header_menu_text_current:                                  white;
+$header_menu_background_current:                            darken(lightgrey, 10%);
+$header_menu_text_current:                                  #282828;
 
 // ==========================================================================
 // Footer section
 // ==========================================================================
 //footer background colours
-$footer-background:                                         #279bb2;
+$footer-background:                                         #ada8a8;
 $sub-footer-background:                                     #282828;
 
 $footer-background-text-color:                              white;
@@ -148,8 +148,12 @@ $footer-background-text-color:                              white;
 $footer_menu_background_color:                              transparent;
 $footer_menu_text_color:                                    white;
 
-$footer_menu_background_hover:                              darken($footer-background, 20%);
+$footer_menu_background_hover:                              lightgrey;
 $footer_menu_text_hover:                                    white;
 
-$footer_menu_background_current:                            darken($footer-background, 10%);
+$footer_menu_background_current:                            darken(lightgrey, 10%);
 $footer_menu_text_current:                                  white;
+
+//used to set colours on divs
+$text-light:                                                white;
+$text-dark:                                                 #444444;

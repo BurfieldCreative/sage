@@ -19,8 +19,8 @@ footer.footer {
 // ==========================================================================
 //Footer buttons and menus can be found in options/buttons and options/menus
 .sub-footer {
-  background: $sub-footer-background;
-  color: white;
+    background: $sub-footer-background;
+    color: white;
 }
 
 // ==========================================================================
@@ -28,51 +28,52 @@ footer.footer {
 // ==========================================================================
 
 .address {
-  text-align: center;
+      text-align: center;
 
-  @include breakpoint(small) {
-    text-align: left;
-  }
+      @include breakpoint(small) {
+          text-align: left;
+      }
 }
 
 // ==========================================================================
 //  Social Icons in footer
 // ==========================================================================
 footer .social {
-  text-align: center;
-  margin-top: $grid-gutter;
+    text-align: center;
+    margin-top: $grid-gutter;
 
-  @include breakpoint(small) {
-    margin-top: -$grid-gutter/3;
-    float: right;
-    text-align: right;
-  }
-
-  li {
-    padding: $grid-gutter/3;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    color: $footer-background-text-color;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $footer_menu_background_hover;
-      transition: color 0.3s ease;
+    @include breakpoint(small) {
+        margin-top: -$grid-gutter/3;
+        float: right;
+        text-align: right;
     }
-  }
+
+    li {
+        padding: $grid-gutter/3;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+        color: $footer-background-text-color;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $footer_menu_background_hover;
+            transition: color 0.3s ease;
+        }
+    }
 }
 
 // ==========================================================================
 //  Footer Menu
 // ==========================================================================
 .nav-footer {
-  display: block;
-  text-align: center;
-  @include breakpoint(small) {
-    text-align: left;
-  }
+    display: block;
+    text-align: center;
+    
+    @include breakpoint(small) {
+        text-align: left;
+    }
 }

@@ -81,7 +81,7 @@
 
   // Slideshow using http://kenwheeler.github.io/slick/
     $('.carousel').slick();
-    
+
     $('.slider').slick({
      slidesToShow: 1,
      slidesToScroll: 1,
@@ -123,6 +123,49 @@
         $('.mobile-menu, #mobile-menu-button').removeClass('open');
       }
     });
+
+
+
+    //	Equal height - by Lewi Hussey
+    // Add data-match-height="groupName" to anything you want equal
+    var matchHeight = function() {
+
+      function init() {
+        eventListeners();
+        matchHeight();
+      }
+
+      function eventListeners() {
+        $(window).on('resize', function() {
+          matchHeight();
+        });
+      }
+
+      function matchHeight() {
+        var groupName = $('[data-match-height]');
+        var groupHeights = [];
+
+        groupName.css('min-height', 'auto');
+
+        groupName.each(function() {
+          groupHeights.push($(this).outerHeight());
+        });
+
+        var maxHeight = Math.max.apply(null, groupHeights);
+        groupName.css('min-height', maxHeight);
+      };
+
+      return {
+        init: init
+      };
+
+    }();
+
+    $(document).ready(function() {
+      matchHeight.init();
+    });
+
+
 
 
 })(jQuery); // Fully reference jQuery after this point.

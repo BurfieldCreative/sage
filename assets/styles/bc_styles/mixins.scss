@@ -1,26 +1,79 @@
 //These can be used mainly on actual divs to set the spacing
 .island {
-  padding-top: $grid-gutter*2;
-  padding-bottom: $grid-gutter*2;
-  overflow: hidden;
+    padding-top: $grid-gutter*2;
+    padding-bottom: $grid-gutter*2;
+    overflow: hidden;
+    clear: both;
 }
 
 .island-top {
-  padding-top: $grid-gutter*2;
-  padding-bottom: 0;
-  overflow: hidden;
+    padding-top: $grid-gutter*2;
+    padding-bottom: 0;
+    overflow: hidden;
+    clear: both;
 }
 
 .island-bottom {
-  padding-top: 0;
-  padding-bottom: $grid-gutter*2;
-  overflow: hidden;
+    padding-top: 0;
+    padding-bottom: $grid-gutter*2;
+    overflow: hidden;
+    clear: both;
 }
 
 .island-half {
-  padding-top: $grid-gutter;
-  padding-bottom: $grid-gutter;
-  overflow: hidden;
+    padding-top: $grid-gutter;
+    padding-bottom: $grid-gutter;
+    overflow: hidden;
+    clear: both;
+}
+
+//these use margin rather then padding
+.island-margin {
+    margin-top: $grid-gutter*2;
+    margin-bottom: $grid-gutter*2;
+    overflow: hidden;
+    clear: both;
+}
+
+.island-top-margin {
+    margin-top: $grid-gutter*2;
+    padding-bottom: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.island-bottom-margin {
+    margin-top: 0;
+    margin-bottom: $grid-gutter*2;
+    overflow: hidden;
+    clear: both;
+}
+
+.island-half-margin {
+    margin-top: $grid-gutter;
+    margin-bottom: $grid-gutter;
+    overflow: hidden;
+    clear: both;
+}
+
+.island-dark {
+    background: #b2b0b1;
+}
+
+.island-white {
+    background: lightgrey;
+}
+
+.text-light {
+    color: $text-light;
+}
+
+.text-dark {
+    color: $text-dark;
+}
+
+.full-width {
+    width: 100%;
 }
 
 // ==========================================================================
@@ -40,13 +93,16 @@
 // ==========================================================================
 
 @mixin breakpoint($point) {
-  @if $point == small {
-    @media (min-width: $breakpoint-tablet)  { @content; }
-  }
-  @else if $point == medium {
-    @media (min-width: $breakpoint-desktop) { @content; }
-  }
-  @else if $point == large {
-    @media (min-width: $breakpoint-hd) { @content; }
-  }
+    
+    @if $point == small {
+        @media (min-width: $breakpoint-tablet)  { @content; }
+    }
+
+    @else if $point == medium {
+        @media (min-width: $breakpoint-desktop) { @content; }
+    }
+
+    @else if $point == large {
+        @media (min-width: $breakpoint-hd) { @content; }
+    }
 }
