@@ -126,43 +126,74 @@
 
 
 
-    //	Equal height - by Lewi Hussey
-    // Add data-match-height="groupName" to anything you want equal
-    var matchHeight = function() {
+    //	Equal height - by Burfield www.burfield.co.uk
+// Example usage use data-match-height="groupName"> on anything!!!
 
-      function init() {
+var matchHeight = function () {
+
+    function init() {
         eventListeners();
         matchHeight();
-      }
+    }
 
-      function eventListeners() {
+    function eventListeners(){
         $(window).on('resize', function() {
-          matchHeight();
+            matchHeight();
         });
-      }
+    }
 
-      function matchHeight() {
+    function matchHeight(){
+        //get all matched height attr
         var groupName = $('[data-match-height]');
         var groupHeights = [];
 
-        groupName.css('min-height', 'auto');
+        // for each attr set the min height to auto this makes it responsive
+        $(groupName).each(function(){
 
-        groupName.each(function() {
-          groupHeights.push($(this).outerHeight());
+            var dataName = $(this);
+
+            var key = dataName.data('match-height');
+
+            //create an array of heights
+            if(!(key in groupHeights)){
+                groupHeights[key] = [];
+            }
+
+            dataName.css('min-height', 'auto');
+
+            dataName.each(function() {
+
+                groupHeights[key].push(dataName.outerHeight());
+
+            });
+
+            return groupHeights['key'];
+
         });
 
-        var maxHeight = Math.max.apply(null, groupHeights);
-        groupName.css('min-height', maxHeight);
-      };
+        var obj = groupHeights;
 
-      return {
+        for (var index in obj) {
+            if (!obj.hasOwnProperty(index)) {
+                continue;
+            }
+
+            var minHeight = Math.max.apply(null, obj[index]);
+            //set the new min height
+            $('[data-match-height="'+index+'"]').css('min-height', minHeight);
+
+        }
+
+    };
+
+    return {
         init: init
-      };
+    };
 
-    }();
+} (); //end of equal heights function
 
     $(document).ready(function() {
-      matchHeight.init();
+        matchHeight.init();
     });
 
 
