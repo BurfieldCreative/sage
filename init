@@ -2,12 +2,11 @@
 
 echo "Installing sage-base-theme"
 
-rm -rf .git*            						&& \
-cd assets/                                      && \
-npm install                                     && \
-bower install                                    && \
-gulp font                                       && \
-gulp build                                      && \
+rm -rf .git*    && \
+npm install     && \
+bower install   && \
+gulp font       && \
+gulp build      && \
 rm init
 
-echo "bc-base-theme successfully installed use gulp watch to watch files"
+echo "bc-base-theme successfully installed use gulp watch to watch files - check your manifest"
