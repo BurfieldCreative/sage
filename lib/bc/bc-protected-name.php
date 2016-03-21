@@ -1,40 +1,5 @@
 <?php
 /**
- * Protected Name Custom Meta Box
- */
-function protected_name_cmb_meta_boxes( $meta_boxes ) {
-
-	$get_post_types	= get_post_types( array('public'   => true), 'names' );//all post types
-
-	$meta_boxes[] = array(
-		'id' => '_protected_name', //used just for storage
-		'title' => 'Developer Conf.',
-		'pages' => array_values( $get_post_types ),
-		'context' => 'side',
-		'priority' => 'core',
-		'show_names' => true, // show field names on the left
-		'fields' => array(
-
-			array(
-				'name' => 'Protected Name',
-				'id' => 'protected_name',
-				'type' => 'text'
-			),
-
-		),
-	);
-
-	return $meta_boxes;
-}
-if ( current_user_can('activate_plugins') ) :
-/**
- * Only For ADMIN
- */
-add_filter( 'cmb_meta_boxes', 'protected_name_cmb_meta_boxes' );
-endif;
-
-
-/**
  * bc return the protected name
  *
  * @package BC Base Theme
@@ -101,24 +66,32 @@ function bc_get_protected_name_query_obj( $protected_page, $post_type = 'page' )
  */
 function site_create_custom_templating( $template ) {
 
-	global $post;
+    $title = false;
     
-    if( false != $post ) {
+    if( is_post_type_archive() ) :
         
-        $protected = bc_get_protected_name_query_obj( $post->post_title, $post->post_type );
-    
+        $protected = bc_get_protected_name_query_obj( get_post_type(), 'page' );
+        
         if( false != $protected ) :
-            
-            $new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($protected->post->post_title).'.php' ) );
-            
-            if ( false != $new_template ) :
-                return $new_template ;
-            endif;
-        
+            $title = get_field( 'protected_name', $protected->post->ID );
         endif;
-
-            
-    }
+                
+    elseif( is_singular() ) :
+        
+        $title =  get_field( 'protected_name' );
+                        
+    endif;
+    
+    
+    if( false != $title ) :            
+                
+        $new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($title).'.php' ) );
+                        
+        if ( false != $new_template ) :
+            return $new_template ;
+        endif;
+    
+    endif;
     
     return $template;
 }
