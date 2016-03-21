@@ -70,7 +70,10 @@ function site_create_custom_templating( $template ) {
     
     if( is_post_type_archive() ) :
         
-        $protected = bc_get_protected_name_query_obj( get_post_type(), 'page' );
+        $post_type = get_post_type();        
+        $post_type_obj = get_post_type_object( $post_type );    
+        
+        $protected = bc_get_protected_name_query_obj( $post_type_obj->labels->name, 'page' );
         
         if( false != $protected ) :
             $title = get_field( 'protected_name', $protected->post->ID );
