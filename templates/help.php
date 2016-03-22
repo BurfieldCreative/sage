@@ -111,15 +111,15 @@
 <h2 style="text-align: center;">Islands</h2>
 <p>Another useful trick are islands these can be found in bc_styles/mixins.scss</p>
 <ul class='list-unstyled'>
-<li><span class="col-3"><code>island</code></span> <span class='col-9'>Adds the <dfn>$gutterwidth*2</dfn> padding to top and bottom of div</span></li>
-<li><span class="col-3"><code>island-top</code></span><span class='col-9'>Adds the <dfn>$gutterwidth*2</dfn> padding to the top ONLY</span></li>
-<li><span class="col-3"><code>island-bottom</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> padding to the bottom ONLY</span></li>
-<li><span class="col-3"><code>island-half</code></span><span class='col-9'> Adds the <dfn>$gutterwidth</dfn> padding to the top and bottom</span></li>
-<li><span class="col-3"><code>island-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to top and bottom of div</span></li>
-<li><span class="col-3"><code>island-top-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to the top ONLY</span></li>
-<li><span class="col-3"><code>island-bottom-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to the bottom ONLY</span></li>
-<li><span class="col-3"><code>island-half-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth</dfn> margin to the top and bottom</span></li>
-<li><span class="col-3"><code>full-width</code></span><span class='col-9'> Sets width: 100%</span></li>
+<li class="row"><span class="col-3"><code>island</code></span> <span class='col-9'>Adds the <dfn>$gutterwidth*2</dfn> padding to top and bottom of div</span></li>
+<li class="row"><span class="col-3"><code>island-top</code></span><span class='col-9'>Adds the <dfn>$gutterwidth*2</dfn> padding to the top ONLY</span></li>
+<li class="row"><span class="col-3"><code>island-bottom</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> padding to the bottom ONLY</span></li>
+<li class="row"><span class="col-3"><code>island-half</code></span><span class='col-9'> Adds the <dfn>$gutterwidth</dfn> padding to the top and bottom</span></li>
+<li class="row"><span class="col-3"><code>island-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to top and bottom of div</span></li>
+<li class="row"><span class="col-3"><code>island-top-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to the top ONLY</span></li>
+<li class="row"><span class="col-3"><code>island-bottom-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth*2</dfn> margin to the bottom ONLY</span></li>
+<li class="row"><span class="col-3"><code>island-half-margin</code></span><span class='col-9'> Adds the <dfn>$gutterwidth</dfn> margin to the top and bottom</span></li>
+<li class="row"><span class="col-3"><code>full-width</code></span><span class='col-9'> Sets width: 100%</span></li>
 </ul>
 
 <div class="island">
@@ -135,9 +135,6 @@
 </ul>
 
 </div>
-
-
-	</br><hr></hr>
 
 
 <?php
@@ -167,8 +164,9 @@
 
 <?php if ( $posts_obj->have_posts() ): ?>
 
-  <article class="vert-listings island">
+  <section class="vert-listings row ">
 
+    
     <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 
       <div class="col-12 col-4-tablet listing">
@@ -193,7 +191,7 @@
 
     <?php endwhile; ?>
 
-  </article>
+  </section>
 
 <?php endif; wp_reset_postdata(); ?>
 <hr></hr>
@@ -252,7 +250,7 @@
           <div class="listing-inner"  data-match-height="hoz-listing">
 
             <?php if( false != has_post_thumbnail() ) : ?>
-            <div class="listing-image col-6 no-padding absolute-image"  data-match-height="img-listing">
+            <div class="listing-image col-6 no-padding ">
             <?php get_template_part( 'templates/images/featured-image'); ?>
             </div>
             <?php endif; ?>
@@ -311,11 +309,12 @@
 	<article class="slider">
 
 		<?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
-			<!--Check if thumbnail exists-->
+			
 			<?php if ( false != has_post_thumbnail() ):?>
-
-				<div class="slide">
-					<?php get_template_part( 'templates/images/featured-image'); ?>
+                
+                <?php $image = get_post_thumbnail_id(); ?>                
+                <div class="slide">
+				    <?php include locate_template( 'templates/images/carousel-image-constrained.php' ); ?>
 				</div>
 
 			<?php endif; ?>
@@ -330,9 +329,10 @@
 		<?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 			<!--Check if thumbnail exists-->
 			<?php if ( false != has_post_thumbnail() ):?>
-
-				<div class="slide">
-					<?php get_template_part( 'templates/images/featured-image'); ?>
+                
+                <?php $image = get_post_thumbnail_id(); ?>                
+                <div class="slide">
+				    <?php include locate_template( 'templates/images/carousel-image-nav.php' ); ?>
 				</div>
 
 			<?php endif; ?>
