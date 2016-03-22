@@ -212,6 +212,14 @@
 	<-li data-match-height="groupName">test 3<-/li>
 <-/ul>
 </pre>
+
+<ul class="list-inline hoz-listings row island">
+	<li class="col-4 listing-inner" data-match-height="groupName">Lorem ipsum dolor sit amet</li>
+	<li class="col-4 listing-inner" data-match-height="groupName">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</li>
+	<li class="col-4 listing-inner" data-match-height="groupName">Lorem ipsum dolor sit amet</li>
+</ul>
+
+
 <hr></hr>
 <?php
 // ====================================================================================================================================================
