@@ -61,3 +61,30 @@ body.sidebar-primary {
         }
     }
 }
+
+
+body {
+    
+    &:after {
+        display: none;
+        
+        content: "mobile";        
+    }
+    
+    @include breakpoint(small) {
+        &:after {
+            content: "tablet";
+        }
+    }
+    @include breakpoint(medium) {
+        &:after {
+            content: "desktop";
+        }
+    }
+    @include breakpoint(large) {
+        &:after {
+            content: "wide";
+        }
+    }
+    
+}

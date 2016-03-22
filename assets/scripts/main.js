@@ -80,6 +80,7 @@
   //--------------------------------------------
 
   // Slideshow using http://kenwheeler.github.io/slick/
+
     $('.carousel').slick();
 
     $('.slider').slick({
@@ -126,13 +127,14 @@
 
 
 
+    // http://codepen.io/Lewitje/pen/YybQEP original copy from Lewi Hussay updated to work with multiple divs
     // Equal height - by Burfield www.burfield.co.uk
     // Example usage use data-match-height="groupName"> on anything!!!
     
     var matchHeight = (function () {
-        
+    
         "use strict";
-        
+    
         function matchHeight(){
             //get all matched height attr
             var groupName = $('[data-match-height]');
@@ -170,24 +172,29 @@
                 }
     
                 var minHeight = Math.max.apply(null, obj[index]);
-                //set the new min height
-                $('[data-match-height="'+index+'"]').css('min-height', minHeight);
+    
+                //if window is bigger then 600px set new height else set height to auto
+                if ($(window).width() > 600) {
+                    $('[data-match-height="'+index+'"]').css('min-height', minHeight);
+                } else {
+                    $('[data-match-height="'+index+'"]').css('min-height', 'auto');
+                }
     
             }
     
         }
-        
+    
         function eventListeners(){
             $(window).on('resize', function() {
                 matchHeight();
             });
         }
-        
+    
         function init() {
             eventListeners();
             matchHeight();
         }
-        
+    
         return {
             init: init
         };
@@ -198,5 +205,39 @@
         matchHeight.init();
     });
 
+    
+
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+
+var detect_mq = {
+    
+    live: true, // Boolean: Trigger on window resize, true or false
+    threshold: 200, // Integer: Threshold time after window resize, in milliseconds
+    callback: function () {
+        
+        var element = document.body;
+        
+        //remove any of our previous classes
+        element.classList.remove( "mobile", "tablet", "desktop", "wide" );
+        //add class to element        
+        element.classList.add(dmq_size);
+        
+        if (dmq_size === "mobile") {
+            //do stuff on mobile
+        }
+        if (dmq_size === "tablet") {
+            //do stuff on tablet
+        }
+        if (dmq_size === "desktop") {
+            //do stuff on desktop
+        }
+        if (dmq_size === "wide") {
+            //do stuff on super wide
+        }
+    
+    }
+    
+};

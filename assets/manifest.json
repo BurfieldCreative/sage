@@ -17,6 +17,11 @@
         "scripts/customizer.js"
       ]
     },
+    "detectMQ.js": {
+      "files": [
+        "scripts/detectMQ.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }
