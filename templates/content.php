@@ -4,12 +4,12 @@
     'col-12',
     'col-6-tablet',
     'col-4-desktop',
-    'vert-listings'
+    'listing'
    );
 ?>
 
 <article <?php post_class($articleclasses); ?>>
-    <div class="listing-inner listing">
+    <div class="listing-inner" data-match-height="vert-listing">
       
       <?php if( false != has_post_thumbnail() ) : ?>
       <div class="listing-image">
