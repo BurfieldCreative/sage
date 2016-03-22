@@ -2,58 +2,42 @@
 .island {
     padding-top: $grid-gutter*2;
     padding-bottom: $grid-gutter*2;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-top {
     padding-top: $grid-gutter*2;
     padding-bottom: 0;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-bottom {
     padding-top: 0;
     padding-bottom: $grid-gutter*2;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-half {
     padding-top: $grid-gutter;
     padding-bottom: $grid-gutter;
-    overflow: hidden;
-    clear: both;
 }
 
 //these use margin rather then padding
 .island-margin {
     margin-top: $grid-gutter*2;
     margin-bottom: $grid-gutter*2;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-top-margin {
     margin-top: $grid-gutter*2;
     padding-bottom: 0;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-bottom-margin {
     margin-top: 0;
     margin-bottom: $grid-gutter*2;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-half-margin {
     margin-top: $grid-gutter;
     margin-bottom: $grid-gutter;
-    overflow: hidden;
-    clear: both;
 }
 
 .island-dark {
