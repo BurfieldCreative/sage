@@ -8,8 +8,7 @@
   "private": true,
   "dependencies": {
     "base": "2.8.0",
-    "slick.js": "1.5.9",
-    "simple-equal-heights": "^0.0.5"
+    "slick.js": "1.5.9"
   },
   "overrides": {
     "base": {
