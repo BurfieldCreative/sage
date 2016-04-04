@@ -1,14 +1,36 @@
-//@import "common/variables";
+//original stylesheets
+@import "../../bower_components/base/src/scss/base/_variables";
+@import "bc_styles/variables.scss";
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-// endbower
+@import "../../bower_components/base/src/scss/base/_mixins";
+@import "../../bower_components/base/src/scss/base/_resets";
+
+@import "../../bower_components/base/src/scss/base/_global";
+@import "../../bower_components/base/src/scss/base/_lists";
+@import "../../bower_components/base/src/scss/base/_blockquotes";
+@import "../../bower_components/base/src/scss/base/_tables";
+@import "../../bower_components/base/src/scss/base/_code";
+@import "../../bower_components/base/src/scss/base/_forms";
+
+@import "../../bower_components/base/src/scss/base/_assets";
+
+@import "../../bower_components/base/src/scss/base/_grid";
+
+// Helpers
+@import "../../bower_components/base/src/scss/base/_helpers";
+
+// Animations
+@import "../../bower_components/base/src/scss/base/_animations";
+
+// Print Styles
+@media print {
+  @import "../../bower_components/base/src/scss/base/_print";
+}
+
+// Sage stylesheets
+
 
 @import "bc_styles/icons.scss";
-
-@import "./bower_components/base/src/scss/style.scss"; //TODO pull using gulp and place main.scss after so variables work
-
-@import "bc_styles/variables.scss";
 @import "bc_styles/mixins.scss";
 
 @import "bc_styles/animations/menu-animations.scss";
