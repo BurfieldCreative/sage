@@ -166,7 +166,7 @@
 
   <section class="vert-listings row ">
 
-    
+
     <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 
       <div class="col-12 col-4-tablet listing">
@@ -317,10 +317,10 @@
 	<article class="slider">
 
 		<?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
-			
+
 			<?php if ( false != has_post_thumbnail() ):?>
-                
-                <?php $image = get_post_thumbnail_id(); ?>                
+
+                <?php $image = get_post_thumbnail_id(); ?>
                 <div class="slide">
 				    <?php include locate_template( 'templates/images/carousel-image-constrained.php' ); ?>
 				</div>
@@ -337,8 +337,8 @@
 		<?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
 			<!--Check if thumbnail exists-->
 			<?php if ( false != has_post_thumbnail() ):?>
-                
-                <?php $image = get_post_thumbnail_id(); ?>                
+
+                <?php $image = get_post_thumbnail_id(); ?>
                 <div class="slide">
 				    <?php include locate_template( 'templates/images/carousel-image-nav.php' ); ?>
 				</div>
@@ -387,7 +387,7 @@
 // Adding Ico fonts
 // ====================================================================================================================================================
 ?>
-
+<h2>When adding fonts I find the easiest quickest way is to add <code>@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);</code> for example to the top of variables.scss then just update the base fonts etc</h2>
 
 
 <h2 style="text-align: center;">Adding Icon fonts using icomoon</h2>
