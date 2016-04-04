@@ -387,7 +387,8 @@
 // Adding Ico fonts
 // ====================================================================================================================================================
 ?>
-<h2>When adding fonts I find the easiest quickest way is to add <code>@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);</code> for example to the top of variables.scss then just update the base fonts etc</h2>
+<h2>Adding Fonts</h2>
+<p>When adding fonts I find the easiest quickest way is to add <code>@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);</code> for example to the top of variables.scss then just update the base fonts etc</p>
 
 
 <h2 style="text-align: center;">Adding Icon fonts using icomoon</h2>
