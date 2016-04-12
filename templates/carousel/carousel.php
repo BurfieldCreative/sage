@@ -1,5 +1,5 @@
 <?php if( have_rows('slider_group') ): ?>
-<div class="slider-container">
+<div class="slider-container ">
 
 	<section class="carousel">
 

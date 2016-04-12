@@ -108,9 +108,9 @@
     $('#mobile-menu-button').click(function(event){
       event.stopPropagation();
       if(!$(this).hasClass('open')) {
-        $('#mobile-menu-button, .mobile-menu').addClass('open');
+        $('#mobile-menu-button, .mobile-menu, .overlay').addClass('open');
       } else {
-        $('#mobile-menu-button, .mobile-menu').removeClass('open');
+        $('#mobile-menu-button, .mobile-menu, .overlay').removeClass('open');
       }
     });
 
@@ -121,7 +121,7 @@
 
     $('html').click(function() {
       if($('.mobile-menu').hasClass('open')) {
-        $('.mobile-menu, #mobile-menu-button').removeClass('open');
+        $('.mobile-menu, #mobile-menu-button, .overlay').removeClass('open');
       }
     });
 

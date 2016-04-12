@@ -52,34 +52,34 @@ use Roots\Sage\Wrapper;
             get_template_part('templates/header');
         ?>
 
-        
+
         <?php
         /**
          * Main Carousel
          */
         ?>
         <?php get_template_part('templates/carousel/carousel'); ?>
-        
-        <div class="main-container">
+
+        <div class="main-container wrap container">
             <?php
             /**
              * DEBUG
              */
             ?>
             <?php echo '<pre>Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
-            
+
             <div class="wrap row" role="document">
-            
+
                 <main class="main">
                     <?php include Wrapper\template_path(); ?>
                 </main><!-- /.main -->
-    
+
                 <?php if (Setup\display_sidebar()) : ?>
                 <aside class="sidebar">
                     <?php include Wrapper\sidebar_path(); ?>
                 </aside><!-- /.sidebar -->
                 <?php endif; ?>
-    
+
             </div><!-- /.wrap -->
         </div>
 
@@ -89,6 +89,7 @@ use Roots\Sage\Wrapper;
             wp_footer();
         ?>
 
-
+        <?php //used for the menu overlay ?>
+        <div class="overlay"></div>
     </body>
 </html>
