@@ -224,11 +224,10 @@ var detect_mq = {
         element.classList.remove( "mobile", "tablet", "desktop", "wide" );
         //add class to element
         element.classList.add(dmq_size);
-
+        
+        var images = [].slice.call(document.getElementsByClassName("swap-image"));
+        
         if (dmq_size === "mobile") {
-
-
-            var images = [].slice.call(document.getElementsByClassName("swap-image"));
 
             images.forEach(function(image, id) {
                 imageUrl = image.getAttribute("data-small");
@@ -242,7 +241,6 @@ var detect_mq = {
 
         }
         if (dmq_size === "tablet") {
-            var images = [].slice.call(document.getElementsByClassName("swap-image"));
 
             images.forEach(function(image, id) {
                 imageUrl = image.getAttribute("data-medium");
@@ -254,7 +252,6 @@ var detect_mq = {
             });
         }
         if (dmq_size === "desktop") {
-            var images = [].slice.call(document.getElementsByClassName("swap-image"));
 
             images.forEach(function(image, id) {
                 imageUrl = image.getAttribute("data-large");
@@ -266,7 +263,6 @@ var detect_mq = {
             });
         }
         if (dmq_size === "wide") {
-            var images = [].slice.call(document.getElementsByClassName("swap-image"));
 
             images.forEach(function(image, id) {
                 imageUrl = image.getAttribute("data-hd");
