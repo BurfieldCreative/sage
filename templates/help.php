@@ -1,3 +1,9 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        
+        
+        
 <h1 style="text-align: center;">Burfield Help Page</h1>
 <p>
 	<strong>The template helper can also be reomved it's in base.php line 69</strong>
@@ -395,3 +401,10 @@
 <p>
 	Icons are already added to update visit styles/bc_styles/icons
 </p>
+
+
+
+
+        </div>
+    </div>
+</div>

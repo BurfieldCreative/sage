@@ -1,3 +1,5 @@
+<div class="container">
+
 <?php $archive_post = bc_get_protected_name_query_obj( 'Services' ); ?>
 <?php include locate_template( 'templates/archive-content.php' ); ?>
 
@@ -15,5 +17,4 @@
   <?php endwhile; ?>
 </div>
 
-
-<?php get_template_part('templates/pagination'); ?>
+</div>

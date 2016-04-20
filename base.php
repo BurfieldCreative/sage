@@ -60,15 +60,15 @@ use Roots\Sage\Wrapper;
         ?>
         <?php get_template_part('templates/carousel/carousel'); ?>
 
-        <div class="main-container wrap container">
+        <div class="wrap <?php echo (Setup\display_sidebar()) ? 'main-container': 'main-container--flush'; ?>">
             <?php
             /**
              * DEBUG
              */
             ?>
-            <?php echo '<pre>Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
+            <?php echo '<pre class="container">Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
 
-            <div class="wrap row" role="document">
+            <div class="row" role="document">
 
                 <main class="main">
                     <?php include Wrapper\template_path(); ?>

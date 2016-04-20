@@ -6,6 +6,10 @@
 .main-container {
     @extend .container;
 }
+.main-container--flush {
+    @extend .container-full;
+    width: 100%;
+}
 
 .wrap.container {
     background: white;
