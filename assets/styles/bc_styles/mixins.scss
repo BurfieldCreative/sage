@@ -19,6 +19,11 @@
     padding-bottom: $grid-gutter;
 }
 
+.island-bottom-half {
+    padding-top: 0;
+    padding-bottom: $grid-gutter;
+}
+
 //these use margin rather then padding
 .island-margin {
     margin-top: $grid-gutter*2;
