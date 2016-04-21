@@ -11,7 +11,7 @@ $data['image_layout']     = ( 'Right' == $data['image_alignment'] ) ? 'flex-row'
 ?>
 
 
-<section class="content-block content-block--5050 island-bottom-margin island-half island-white">
+<section class="content-block content-block--5050 island-bottom-margin island-half island-white clear">
     
     <div class="container">
         <div class="row vertical-center <?php echo $data['image_layout'] ?>">
