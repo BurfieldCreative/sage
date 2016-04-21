@@ -5,6 +5,111 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 0;
 }
 
+// Headings
+h1, .h1 {
+    
+    @include font-size($h1-font-size - 8);
+    @include line-height($h1-line-height - 8);
+        
+
+    @include breakpoint(medium) {        
+        @include font-size($h1-font-size - 4);
+        @include line-height($h1-line-height - 4);
+    }
+
+    @include breakpoint(large) {    
+        @include font-size($h1-font-size);
+        @include line-height($h1-line-height);
+    }
+    
+}
+h2, .h2 {
+    
+    @include font-size($h2-font-size - 8);
+    @include line-height($h2-line-height - 8);
+        
+
+    @include breakpoint(medium) {        
+        @include font-size($h2-font-size - 4);
+        @include line-height($h2-line-height - 4);
+    }
+
+    @include breakpoint(large) {    
+        @include font-size($h2-font-size);
+        @include line-height($h2-line-height);
+    }
+    
+}
+h3, .h3 {
+    
+    @include font-size($h3-font-size - 8);
+    @include line-height($h3-line-height - 8);
+        
+
+    @include breakpoint(medium) {        
+        @include font-size($h3-font-size - 4);
+        @include line-height($h3-line-height - 4);
+    }
+
+    @include breakpoint(large) {    
+        @include font-size($h3-font-size);
+        @include line-height($h3-line-height);
+    }
+    
+}
+h4, .h4 {
+    
+    @include font-size($h4-font-size - 8);
+    @include line-height($h4-line-height - 8);
+        
+
+    @include breakpoint(medium) {        
+        @include font-size($h4-font-size - 4);
+        @include line-height($h4-line-height - 4);
+    }
+
+    @include breakpoint(large) {    
+        @include font-size($h4-font-size);
+        @include line-height($h4-line-height);
+    }
+    
+}
+h5, .h5 {
+    
+    @include font-size($h5-font-size - 8);
+    @include line-height($h5-line-height - 8);
+        
+
+    @include breakpoint(medium) {        
+        @include font-size($h5-font-size - 4);
+        @include line-height($h5-line-height - 4);
+    }
+
+    @include breakpoint(large) {    
+        @include font-size($h5-font-size);
+        @include line-height($h5-line-height);
+    }
+    
+}
+h6, .h6 {
+    
+    @include font-size($h6-font-size - 8);
+    @include line-height($h6-line-height - 8);
+        
+
+    @include breakpoint(medium) {        
+        @include font-size($h6-font-size - 4);
+        @include line-height($h6-line-height - 4);
+    }
+
+    @include breakpoint(large) {    
+        @include font-size($h6-font-size);
+        @include line-height($h6-line-height);
+    }
+    
+}
+        
+
 // ==========================================================================
 //Vertical Listings
 // ==========================================================================
