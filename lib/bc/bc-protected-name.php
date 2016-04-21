@@ -78,7 +78,12 @@ function site_create_custom_templating( $template ) {
         if( false != $protected ) :
             $title = get_field( 'protected_name', $protected->post->ID );
         endif;
-                
+    
+    elseif( is_home() ) :
+        
+        $page_for_posts_id = get_option('page_for_posts' );
+        $title = get_field( 'protected_name', $page_for_posts_id );
+              
     elseif( is_singular() ) :
         
         $title =  get_field( 'protected_name' );
