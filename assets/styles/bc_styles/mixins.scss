@@ -99,3 +99,16 @@
         @media (min-width: $breakpoint-hd) { @content; }
     }
 }
+
+
+.clear {
+   clear: both;
+}
+
+img {
+   display: block;
+}
+
+.overflow {
+   overflow: hidden;
+}
