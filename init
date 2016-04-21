@@ -5,8 +5,8 @@ echo "Installing sage-base-theme"
 rm -rf .git*    && \
 npm install     && \
 bower install   && \
-gulp font       && \
+gulp fonts       && \
 gulp build      && \
 rm init
 
-echo "bc-base-theme successfully installed use gulp watch to watch files - check your manifest"
+echo "UPDATE YOUR MANIFEST FILE URL it can be found in sage/assets/manifest.json once done run gulp watch and your all done!!!! - "
