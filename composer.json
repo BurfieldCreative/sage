@@ -3,11 +3,7 @@
     "type": "wordpress-theme",
     "require" : {
         "composer/installers" : "~1.0"
-    },
-    "scripts": {
-		"post-install-cmd": ["chmod 744 init && ./init"],
-		"post-package-install": ["chmod 744 init && ./init"]
-	}
+    }
 }
 
 
