@@ -7,4 +7,3 @@
     <?php the_excerpt(); ?>
   </div>
 </article>
-this is content-search.php

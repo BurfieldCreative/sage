@@ -1,6 +1,11 @@
 <?php use Roots\Sage\Titles; ?>
 
-<div class="page-header">
-  <h1><?= Titles\title(); ?></h1>
+<?php if(!is_front_page()):?>
+<div class="<?php echo (Roots\Sage\Setup\display_sidebar()) ? false : 'container'; ?>">
+    <div class="row">
+    <div class="col-12">
+        <h1 class="page-header"><?= Titles\title(); ?></h1>
+    </div>
+    </div>
 </div>
-this is page-header.php
+<?php endif;?>

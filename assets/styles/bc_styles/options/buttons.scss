@@ -1,19 +1,24 @@
+
 // ==========================================================================
 // Custom Buttons
 // ==========================================================================
 .button {
-  line-height: normal;
-  padding:$grid-gutter/2 $grid-gutter;
-  text-decoration: none;
-  color: #363636;
-  display: block;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+    line-height: normal;
+    padding:$grid-gutter/2 $grid-gutter;
+    text-decoration: none;
+    color: #363636;
+    display: block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 
-  &:hover, &:active { text-decoration: none; }
-  &:hover { background: #f9f9f9; }
+    &:hover, &:active {
+        text-decoration: none;
+    }
 
+    &:hover {
+        background: $pcolor;
+    }
 }
 
 .button-primary {
@@ -25,31 +30,38 @@
 }
 
 // ==========================================================================
-// header Buttons
+// CHANGE COLOURS IN VARIBALES.SCSS
 // ==========================================================================
 
-.header-menu-buttons {
-  @extend .button;
-  background: transparent;
-  border: 0;
-  color: white;
+// ==========================================================================
+// header Buttons beginning at li
+// ==========================================================================
 
-  &:hover {
-    background: red;
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-  }
+.header-menu {
+  a {
 
-  //The first li a
-  &:first-child & a {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+    @extend .button;
+    background: $header_menu_background_color;
+    color: $header_menu_text_color;
+    border: 0;
+    margin: 0 $grid-gutter/2;
+
+    &:hover {
+      background: $header_menu_background_hover;
+      color: $header_menu_text_hover;
+    }
   }
 
   //The current menu item
-  &.current-menu-item & a {
-    background: rgba(0,0,0,0.4);
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
+  .current-menu-item a {
+    background: $header_menu_background_current;
+    color: $header_menu_text_current;
+
+    &:hover {
+      //When hovering on the current menu item
+      background: $header_menu_background_hover;
+      color: $header_menu_text_hover;
+    }
   }
 }
 
@@ -57,28 +69,33 @@
 // Footer menu Buttons
 // ==========================================================================
 
-.footer-menu-buttons {
-  @extend .button;
-  background: transparent;
-  border: 0;
-  color: white;
+.footer-menu {
 
-  &:hover {
-    background: red;
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-  }
+  a {
 
-  //The first li a
-  &:first-child & a {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+    @extend .button;
+    background: $footer_menu_background_color;
+    border: 0;
+    color: $footer_menu_text_color;
+    padding: $grid-gutter/2;
+    margin-right: $grid-gutter/2;
+
+    &:hover {
+      background: $footer_menu_background_hover;
+      color: $footer_menu_text_hover;
+    }
   }
 
   //The current menu item
-  &.current-menu-item & a {
-    background: rgba(0,0,0,0.4);
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
+  .current-menu-item a{
+    background: $footer_menu_background_current;
+    color: $footer_menu_text_current;
+
+    &:hover {
+      //When hovering on the current menu item
+      background: $footer_menu_background_hover;
+      color: $footer_menu_text_current;
+    }
   }
 }
 
@@ -86,34 +103,37 @@
 // Mobile Menu Buttons
 // ==========================================================================
 .mobile-menu-buttons {
-  display: block;
-  padding: 1em 1em 1em 1.2em;
-  outline: none;
-  box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-  color: #f3efe0;
-  text-transform: capitalize;
-  text-shadow: 0 0 1px rgba(255,255,255,0.1);
-  letter-spacing: 1px;
-  font-weight: 300;
-  -webkit-transition: background 0.3s, box-shadow 0.3s;
-  transition: background 0.3s, box-shadow 0.3s;
-  text-decoration: none;
 
-  &:hover {
-    background: rgba(0,0,0,0.2);
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-  }
+  a {
+    display: block;
+    padding: $grid-gutter $grid-gutter $grid-gutter*1.3 $grid-gutter;
+    outline: none;
+    box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+    text-transform: capitalize;
+    text-shadow: 0 0 1px rgba(255,255,255,0.1);
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: background 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    background: $mobile_menu_background_color;
+    color: $mobile_menu_text_color;
 
-  //The first li a
-  &:first-child & a {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
-  }
+        &:hover {
+            background: $mobile_menu_background_hover;
+            box-shadow: inset 0 -1px rgba(0,0,0,0);
+            color: $mobile_menu_text_hover;
+        }
+    }
 
-  //The current menu item
-  &.current-menu-item & a {
-    background: rgba(0,0,0,0.4);
-    box-shadow: inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-  }
+    //The first li a
+    li:first-child a {
+        box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+    }
+
+    //The current menu item
+    .current-menu-item a {
+        background: $mobile_menu_background_current;
+        box-shadow: inset 0 -1px rgba(0,0,0,0);
+        color: $mobile_menu_text_current;
+    }
 }

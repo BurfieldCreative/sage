@@ -1,63 +1,95 @@
 <?php
-
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
-
-$menu_class = 8; //add a interger options available are 1 - 8
-
 ?>
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
-  <?php get_template_part('templates/head'); ?>
+    <?php get_template_part('templates/head'); ?>
     <body <?php body_class(); ?>>
-      <!--[if IE]>
-      <div class="alert alert-warning">
-      <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
-    </div>
-    <![endif]-->
-    <div class="bc-effect-<?php echo $menu_class; ?>" id="bc-wrapper">
-      <div class="wrapper-inner <?php echo ($menu_class == '3') ? 'bc-pusher' : '';?>" id="main-content" role="document">
+
+
+        <!--[if IE]>
+        <div class="alert alert-warning">
+            <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+        </div>
+        <![endif]-->
+
 
         <!--Mobile menu hidden on desktop-->
-        <nav class="none-desktop block-tablet bc-menu bc-effect-<?php echo $menu_class; ?>">
+        <?php
+        /**
+         * AVAILABLE OPTIONS
+         * .nav-off-canvas-above-right,
+         * .nav-off-canvas-above-left .nav-off-canvas-left,
+         * .nav-off-canvas-right,
+         * .nav-off-canvas-top
+         */
+        ?>
+        <nav class="mobile-menu nav-off-canvas-right" >
+        <?php
+            if ( has_nav_menu( 'primary_navigation' ) ) :
 
-          <?php
-            if (has_nav_menu('primary_navigation')) :
-              wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'header-menu']);
+            $args = array(
+                'menu_class' => 'off-canvas-menu none-desktop block-tablet list-unstyled',
+                'theme_location' => 'primary_navigation',
+
+                'container' => false,
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth' => 1,
+                'fallback_cb' => false,
+            );
+
+            wp_nav_menu( $args );
+
             endif;
-            ?>
-
+        ?>
         </nav>
 
 
-        <div class="content <?php echo ($menu_class != '3') ? 'bc-pusher' : '';?>" id="main-content">
-          <?php
+        <?php
             do_action('get_header');
             get_template_part('templates/header');
-          ?>
+        ?>
 
-          <div class='container row'>
 
-            <main class="main-content" id="main-page-content">
+        <?php
+        /**
+         * Main Carousel
+         */
+        ?>
+        <?php get_template_part('templates/carousel/carousel'); ?>
 
-              <?php include Wrapper\template_path(); ?>
+        <div class="wrap <?php echo (Setup\display_sidebar()) ? 'main-container': 'main-container--flush'; ?>">
+            <?php
+            /**
+             * DEBUG
+             */
+            ?>
+            <?php echo '<pre class="container">Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
 
-            </main>
+            <div class="row" role="document">
 
-            <?php if (Setup\display_sidebar()) : ?>
-              <?php include Wrapper\sidebar_path(); ?>
-            <?php endif; ?>
+                <main class="main">
+                    <?php include Wrapper\template_path(); ?>
+                </main><!-- /.main -->
 
-          </div>
+                <?php if (Setup\display_sidebar()) : ?>
+                <aside class="sidebar">
+                    <?php include Wrapper\sidebar_path(); ?>
+                </aside><!-- /.sidebar -->
+                <?php endif; ?>
 
-          <?php
-          do_action('get_footer');
-          get_template_part('templates/footer');
-          wp_footer();
-          ?>
+            </div><!-- /.wrap -->
         </div>
-      </div><!-- /end of menu push -->
-    </div>
-  </body>
+
+        <?php
+            do_action('get_footer');
+            get_template_part('templates/footer');
+            wp_footer();
+        ?>
+
+        <?php //used for the menu overlay ?>
+        <div class="overlay"></div>
+    </body>
 </html>

@@ -1,0 +1,136 @@
+{
+    "key": "group_56dd879140350",
+    "title": "Social Account Options",
+    "fields": [
+        {
+            "key": "field_56dd87a55e3f1",
+            "label": "Twitter Profile",
+            "name": "twitter_profile",
+            "type": "url",
+            "instructions": "Enter your Twitter profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56dd8814cc7b3",
+            "label": "Facebook Profile",
+            "name": "facebook_profile",
+            "type": "url",
+            "instructions": "Enter your Facebook profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56dd8833cc7b4",
+            "label": "YouTube Profile",
+            "name": "youtube_profile",
+            "type": "url",
+            "instructions": "Enter your YouTube profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56dd8858cc7b5",
+            "label": "Vimeo Profile",
+            "name": "vimeo_profile",
+            "type": "url",
+            "instructions": "Enter your Vimeo profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56dd886dcc7b6",
+            "label": "Instagram Profile",
+            "name": "instagram_profile",
+            "type": "url",
+            "instructions": "Enter your Instagram profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56dd8884cc7b7",
+            "label": "LinkedIn Profile",
+            "name": "linkedin_profile",
+            "type": "url",
+            "instructions": "Enter your LinkedIn profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56dd889bcc7b8",
+            "label": "GooglePlus Profile",
+            "name": "googleplus_profile",
+            "type": "url",
+            "instructions": "Enter your Google+ Company Profile url. Used throughout the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-social"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1457525860
+}

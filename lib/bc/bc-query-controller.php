@@ -55,4 +55,3 @@ function site_query_controller($query) {
     return $query;
 }
 add_action('pre_get_posts', 'site_query_controller');
-?>

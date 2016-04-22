@@ -28,7 +28,7 @@ global $post;
 	?>
 
 	<?php if( $list_pages ) : ?>
-	<aside class="sidebar sidebar--nav-descendants">
+	<aside class="island-bottom sidebar--nav-descendants">
 
         <ul class="side-nav list-unstyled">
 

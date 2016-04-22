@@ -1,0 +1,45 @@
+{
+    "key": "group_56ec264ba8ed8",
+    "title": "BC Protected Name",
+    "fields": [
+        {
+            "key": "field_56ec26621e273",
+            "label": "Protected Name",
+            "name": "protected_name",
+            "type": "text",
+            "instructions": "The protected name given to harden templating",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1458317385
+}

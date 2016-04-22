@@ -1,0 +1,20 @@
+.sidebar {
+
+    li.heading {
+        font-size: 20px;
+        margin-bottom: $grid-gutter;
+    }
+
+    li {
+        margin-bottom: $grid-gutter/2;
+
+        a {
+        text-decoration: none;
+        display: block;
+        
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

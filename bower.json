@@ -17,8 +17,11 @@
       ]
     },
     "slick.js": {
-	     "main" : ["slick/slick.min.js", "slick/slick.css", "slick/fonts/*"]
-	   }
-
+      "main": [
+        "slick/slick.min.js",
+        "slick/slick.css",
+        "slick/fonts/*"
+      ]
+    }
   }
 }

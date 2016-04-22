@@ -34,4 +34,3 @@ if (post_password_required()) {
 
   <?php comment_form(); ?>
 </section>
-this is comments.php

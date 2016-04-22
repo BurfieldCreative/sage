@@ -17,11 +17,16 @@
         "scripts/customizer.js"
       ]
     },
+    "detectMQ.js": {
+      "files": [
+        "scripts/detectMQ.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }
   },
   "config": {
-    "devUrl": "http://www.bedrock.dev/"
+    "devUrl": "http://www.bedrock.local/"
   }
 }

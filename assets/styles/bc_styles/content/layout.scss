@@ -1,0 +1,113 @@
+// ==========================================================================
+//These need to be the same color for the mobile menus to work
+// Use container-full to remove all padding on left and right
+// remove to make full width or extend on page basis ie body.front etc
+// ==========================================================================
+.main-container {
+    @extend .container;
+}
+.main-container--flush {
+    @extend .container-full;
+    width: 100%;
+}
+
+.wrap.container {
+    background: white;
+}
+
+.container {
+   width: 100%;
+   max-width: 1200px;
+   margin: auto;
+}
+
+
+// ==========================================================================
+//Layout settings
+// ==========================================================================
+main {
+    @extend .col-12;
+    margin-top: $grid-gutter*3;
+    margin-bottom: $grid-gutter*3;
+}
+.sidebar {
+    @extend .col-12;
+    margin-top: $grid-gutter*3;
+    margin-bottom: $grid-gutter*3;
+}
+
+body.sidebar-primary {
+
+    .sidebar {
+        @extend .col-12;
+
+        @include breakpoint(small) {
+            @extend .col-4-tablet;
+        }
+
+        @include breakpoint(medium) {
+            @extend .col-3-desktop;
+        }
+
+        @include breakpoint(medium) {
+            @extend .col-3-hd;
+        }
+    }
+
+  main {
+
+        @extend .col-12;
+
+        @include breakpoint(small) {
+            @extend .col-8-tablet;
+        }
+
+        @include breakpoint(medium) {
+            @extend .col-9-desktop;
+        }
+
+        @include breakpoint(large) {
+            @extend .col-9-hd;
+        }
+        
+        
+        
+        .container,
+        .container-full {
+        
+            @extend .col-12;
+            
+        }
+        
+    }
+    
+    
+    
+}
+
+
+body {
+    
+    &:after {
+        display: none;
+        
+        content: "mobile";        
+    }
+    
+    @include breakpoint(small) {
+        &:after {
+            content: "tablet";
+        }
+    }
+    @include breakpoint(medium) {
+        &:after {
+            content: "desktop";
+        }
+    }
+    @include breakpoint(large) {
+        &:after {
+            content: "wide";
+        }
+    }
+    
+}

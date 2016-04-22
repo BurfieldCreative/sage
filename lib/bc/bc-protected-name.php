@@ -1,40 +1,5 @@
 <?php
 /**
- * Protected Name Custom Meta Box
- */
-function protected_name_cmb_meta_boxes( $meta_boxes ) {
-
-	$get_post_types	= get_post_types( array('public'   => true), 'names' );//all post types
-
-	$meta_boxes[] = array(
-		'id' => '_protected_name', //used just for storage
-		'title' => 'Developer Conf.',
-		'pages' => array_values( $get_post_types ),
-		'context' => 'side',
-		'priority' => 'core',
-		'show_names' => true, // show field names on the left
-		'fields' => array(
-
-			array(
-				'name' => 'Protected Name',
-				'id' => 'protected_name',
-				'type' => 'text'
-			),
-
-		),
-	);
-
-	return $meta_boxes;
-}
-if ( current_user_can('activate_plugins') ) :
-/**
- * Only For ADMIN
- */
-add_filter( 'cmb_meta_boxes', 'protected_name_cmb_meta_boxes' );
-endif;
-
-
-/**
  * bc return the protected name
  *
  * @package BC Base Theme
@@ -87,29 +52,55 @@ function bc_get_protected_name_query_obj( $protected_page, $post_type = 'page' )
         ),
     );
     $protect_name_query = new WP_Query( $args );
-
-	return $protect_name_query = new WP_Query( $args );;
+    if ( false != $protect_name_query->have_posts() )
+    {
+        return $protect_name_query;
+    }
+    
+    return false;
 }
 
-// Affords us the ability to assign a specific template to any CMS page with a protected name.
-// Takes some of the unpredictably out of WPs occasionally erratic templating behaviour,
-// and allows us to keep a tidy ship.
+/**
+ * Automatio tempalte loading for posts that have a protected name and 
+ * a matching template file in the custom directory
+ */
 function site_create_custom_templating( $template ) {
 
-	global $post;
-
-	$protected = bc_get_protected_name_query_obj( $post->post_title, $post->post_type );
-
-	if(!empty($protected->post)) {
-
-		$new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($post->post_title).'.php' ) );
-
- 		if ( false != $new_template ) {
-			return $new_template ;
-		}
-
-	}
-
+    $title = false;
+    
+    if( is_post_type_archive() ) :
+        
+        $post_type = get_post_type();        
+        $post_type_obj = get_post_type_object( $post_type );    
+        
+        $protected = bc_get_protected_name_query_obj( $post_type_obj->labels->name, 'page' );
+        
+        if( false != $protected ) :
+            $title = get_field( 'protected_name', $protected->post->ID );
+        endif;
+    
+    elseif( is_home() ) :
+        
+        $page_for_posts_id = get_option('page_for_posts' );
+        $title = get_field( 'protected_name', $page_for_posts_id );
+              
+    elseif( is_singular() ) :
+        
+        $title =  get_field( 'protected_name' );
+                        
+    endif;
+    
+    
+    if( false != $title ) :            
+                
+        $new_template = locate_template( array( 'templates/custom-pages/'.sanitize_title($title).'.php' ) );
+                        
+        if ( false != $new_template ) :
+            return $new_template ;
+        endif;
+    
+    endif;
+    
     return $template;
 }
 add_action( 'template_include', 'site_create_custom_templating' );

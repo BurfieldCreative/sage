@@ -5,7 +5,20 @@
  * General utilizy functions used throughout the theme
  *
  */
-
+/**
+ * Check for existence of child pages
+ * 
+ * @return bool          return true/false
+ * @since 3.0.11
+ */
+function bc_has_children( $post = false ) {
+    $post = ( false == $post ) ? get_post() : ( is_int( $post ) ) ? get_post( $post ) : $post ;
+    
+    $pages = get_pages('child_of=' . $post->ID);
+    
+    return ( 0 == count($pages) ) ? false : true;
+	
+}
 /**
  * WordPress' missing is_blog_page() function.  Determines if the currently viewed page is
  * one of the blog pages, including the blog home page, archive, category/tag, author, or single

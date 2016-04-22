@@ -220,3 +220,9 @@ function always_return_false_for_vcs( $checkout, $context ) {
    return false;
 }
 add_filter( 'automatic_updates_is_vcs_checkout', 'always_return_false_for_vcs', 10, 2 );
+
+
+function bc_excerpt_length( $length ) {
+	return 10;
+}
+add_filter( 'excerpt_length', 'bc_excerpt_length', 999 );

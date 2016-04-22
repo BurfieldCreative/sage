@@ -1,16 +1,22 @@
+// ==========================================================================
 //Main header banner
+// ==========================================================================
 header.banner {
-  background: $headerbackground;
-  overflow: hidden;
 
-  .container {
+    background: $headerbackground;
+    overflow: hidden;
     position: relative;
+    z-index: 100;
 
-    .site-logo {
-      display: block;
-      float: left;
-      margin: $grid-gutter 0;
+    .container {
+
+        @extend .flex;
+        align-items: center;
+
+        .site-logo {
+            display: block;
+            float: left;
+            margin: $grid-gutter 0;
+        }
     }
-
-  }
 }
