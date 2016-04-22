@@ -170,34 +170,43 @@
 
 <?php if ( $posts_obj->have_posts() ): ?>
 
-  <section class="vert-listings row ">
-
-
+<section class="vert-listings row">
+    
+    
     <?php while ( $posts_obj->have_posts() ) : $posts_obj->the_post(); ?>
-
-      <div class="col-12 col-4-tablet listing">
-          <div class="listing-inner" data-match-height="vert-listing">
-
-            <?php if( false != has_post_thumbnail() ) : ?>
-            <div class="listing-image">
-            <?php get_template_part( 'templates/images/featured-image'); ?>
-            </div>
-            <?php endif; ?>
-
-            <div class="listing-text">
-              <header>
-
-                <a href="<?php the_permalink(); ?>"><h2 class="no-margin" itemprop="headline"><?php the_title(); ?></h2></a>
-
-              </header>
-              <p><?php the_excerpt(); ?></p>
-            </div>
+    <?php
+      $articleclasses = array(
+        'col-12',
+        'col-6-tablet',
+        'col-4-desktop',
+        'listing'
+       );
+    ?>
+    
+    <article <?php post_class($articleclasses); ?>>
+        <div class="listing-inner" data-match-height="vert-listing">
+          
+          <?php if( false != has_post_thumbnail() ) : ?>
+          <div class="listing-image">
+            <?php get_template_part( 'templates/images/featured-image--listing'); ?>
           </div>
-      </div>
-
+          <?php endif; ?>
+          
+          <div class="listing-text">
+            <header>
+    
+              <a href="<?php the_permalink(); ?>"><h2 class="no-margin" itemprop="headline"><?php the_title(); ?></h2></a>
+              <?php get_template_part('templates/entry-meta'); ?>
+            </header>
+            <p><?php the_excerpt(); ?></p>
+          </div>
+        </div>
+    </article>
     <?php endwhile; ?>
+    
+    
+</section>
 
-  </section>
 
 <?php endif; wp_reset_postdata(); ?>
 <hr></hr>
@@ -265,7 +274,7 @@
 
             <?php if( false != has_post_thumbnail() ) : ?>
             <div class="listing-image col-6 no-padding ">
-            <?php get_template_part( 'templates/images/featured-image'); ?>
+            <?php get_template_part( 'templates/images/featured-image--listing'); ?>
             </div>
             <?php endif; ?>
 

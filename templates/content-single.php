@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
     <?php if( false != has_post_thumbnail() ) : ?>
     <div class="listing-image">
-    <?php get_template_part( 'templates/images/featured-image'); ?>
+    <?php get_template_part( 'templates/images/featured-image--single'); ?>
     </div>
     <?php endif; ?>
     
