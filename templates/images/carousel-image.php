@@ -12,14 +12,14 @@
     	'settings' => array(
 
 				array(
-					'name' => '480',
+					'name' => 'small',
 					'width' => 640,
 					'height' => 360,
 					'crop' => true,
 					'resize' => true,
 				),
 				array(
-					'name' => '640',
+					'name' => 'medium',
 					'width' => 960,
 					'height' => 540,
 					'crop' => true,
@@ -27,7 +27,7 @@
 				),
 
 				array(
-					'name' => '1024',
+					'name' => 'large',
 					'width' => 1040,
 					'height' => 640,
 					'crop' => true,
@@ -35,7 +35,7 @@
 				),
 
 				array(
-					'name' => '2040',
+					'name' => 'hd',
 					'width' => 2040,
 					'height' => 600,
 					'crop' => true,
@@ -50,14 +50,14 @@
     ?>
 
 
-<picture>
-    <?php foreach( $image_data['sized_imagery'] AS $break_name => $img_set ) : ?>
-		<?php if( '2040' == $break_name ) : ?>
-			<img src="<?php echo $img_set['src']; ?>" alt="Nymphenburg Castle in Munich during sunset">
-		<?php else: ?>
-			<source media="(max-width: <?php echo $break_name; ?>px)" srcset="<?php echo $img_set['src']; ?>">
-		<?php endif; ?>
-    <?php endforeach; ?>
-</picture>
+    <img class="swap-image"
+		src="<?php echo $image_data['sized_imagery']['2040']['src']; ?>"
+
+		<?php foreach( $image_data['sized_imagery'] AS $break_name => $img_set ) : ?>
+
+			<?php echo 'data-' . $break_name . '="' . $img_set['src'] . '"'; ?>
+		<?php endforeach; ?>
+
+	>
 
 <?php endif; ?>
