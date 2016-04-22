@@ -1,16 +1,6 @@
 {
     "name": "BurfieldCreative/sage",
-    "authors": [
-        {
-            "name": "Burfield Developers",
-            "email": "developers@burfieldcreative.co.uk"
-        }
-    ],
     "type": "wordpress-theme",
-    "scripts": {
-        "post-install-cmd": ["chmod 744 init && ./init"],
-        "post-package-install": ["chmod 744 init && ./init"]
-    }
 }
 
 
