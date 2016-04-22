@@ -1,5 +1,7 @@
 <footer class="footer">
 
+    <?php get_template_part( 'templates/recent-posts' ); ?>
+
     <div class="container row island">
         <div class='address col-12 col-6-tablet'>
             <?php get_template_part( 'templates/vcard' ); ?>
