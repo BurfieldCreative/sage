@@ -20,7 +20,7 @@ Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and g
 Start by “Recursively” cloning the repo in the desired destination (e.g. /Users/You/sites/*)
 
 ```
-git clone --recursive --depth 1 git@github.com:BurfieldCreative/bc-wordpress-base.git %%YOURPROJECTDIR%%
+git clone --recursive --depth 1 git@github.com:BurfieldCreative/sage.git %%YOURPROJECTDIR%%
 ```
 
 
