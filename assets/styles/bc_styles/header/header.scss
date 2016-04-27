@@ -5,10 +5,8 @@ header.banner {
 
     background: $headerbackground;
     overflow: hidden;
-    position: relative;
-    z-index: 100;
 
-    .container {
+    .banner__inner {
 
         @extend .flex;
         align-items: center;

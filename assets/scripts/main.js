@@ -108,9 +108,9 @@
     $('#mobile-menu-button').click(function(event){
       event.stopPropagation();
       if(!$(this).hasClass('open')) {
-        $('#mobile-menu-button, .mobile-menu, .overlay').addClass('open');
+        $('#mobile-menu-button, .mobile-menu').addClass('open');
       } else {
-        $('#mobile-menu-button, .mobile-menu, .overlay').removeClass('open');
+        $('#mobile-menu-button, .mobile-menu').removeClass('open');
       }
     });
 
@@ -121,7 +121,7 @@
 
     $('html').click(function() {
       if($('.mobile-menu').hasClass('open')) {
-        $('.mobile-menu, #mobile-menu-button, .overlay').removeClass('open');
+        $('.mobile-menu, #mobile-menu-button').removeClass('open');
       }
     });
 
@@ -130,82 +130,82 @@
     // http://codepen.io/Lewitje/pen/YybQEP original copy from Lewi Hussay updated to work with multiple divs
     // Equal height - by Burfield www.burfield.co.uk
     // Example usage use data-match-height="groupName"> on anything!!!
-
+    
     var matchHeight = (function () {
-
+    
         "use strict";
-
+    
         function matchHeight(){
             //get all matched height attr
             var groupName = $('[data-match-height]');
             var groupHeights = [];
-
+    
             // for each attr set the min height to auto this makes it responsive
             $(groupName).each(function(){
-
+    
                 var dataName = $(this);
-
+    
                 var key = dataName.data('match-height');
-
+    
                 //create an array of heights
                 if(!(key in groupHeights)){
                     groupHeights[key] = [];
                 }
-
+    
                 dataName.css('min-height', 'auto');
-
+    
                 dataName.each(function() {
-
+    
                     groupHeights[key].push(dataName.outerHeight());
-
+    
                 });
-
+    
                 return groupHeights.key;
-
+    
             });
-
+    
             var obj = groupHeights;
-
+    
             for (var index in obj) {
                 if (!obj.hasOwnProperty(index)) {
                     continue;
                 }
-
+    
                 var minHeight = Math.max.apply(null, obj[index]);
-
+    
                 //if window is bigger then 600px set new height else set height to auto
                 if ($(window).width() > 600) {
                     $('[data-match-height="'+index+'"]').css('min-height', minHeight);
                 } else {
                     $('[data-match-height="'+index+'"]').css('min-height', 'auto');
                 }
-
+    
             }
-
+    
         }
-
+    
         function eventListeners(){
             $(window).on('resize', function() {
                 matchHeight();
             });
         }
-
+    
         function init() {
             eventListeners();
             matchHeight();
         }
-
+    
         return {
             init: init
         };
-
+    
     }());
-
+    
     $(document).ready(function() {
         matchHeight.init();
     });
 
-
+    
 
 
 })(jQuery); // Fully reference jQuery after this point.
@@ -213,67 +213,31 @@
 
 
 var detect_mq = {
-
+    
     live: true, // Boolean: Trigger on window resize, true or false
     threshold: 200, // Integer: Threshold time after window resize, in milliseconds
     callback: function () {
-
+        
         var element = document.body;
-
+        
         //remove any of our previous classes
         element.classList.remove( "mobile", "tablet", "desktop", "wide" );
-        //add class to element
+        //add class to element        
         element.classList.add(dmq_size);
         
-        var images = [].slice.call(document.getElementsByClassName("swap-image"));
-        
         if (dmq_size === "mobile") {
-
-            images.forEach(function(image, id) {
-                imageUrl = image.getAttribute("data-small");
-                image.setAttribute("src", imageUrl);
-
-                // console.log(imageUrl, image.getAttribute("data-small"));
-                // console.log('small');
-
-            });
-
-
+            //do stuff on mobile
         }
         if (dmq_size === "tablet") {
-
-            images.forEach(function(image, id) {
-                imageUrl = image.getAttribute("data-medium");
-                image.setAttribute("src", imageUrl);
-
-                // console.log(imageUrl, image.getAttribute("data-medium"));
-                // console.log('medium');
-
-            });
+            //do stuff on tablet
         }
         if (dmq_size === "desktop") {
-
-            images.forEach(function(image, id) {
-                imageUrl = image.getAttribute("data-large");
-                image.setAttribute("src", imageUrl);
-
-                // console.log(imageUrl, image.getAttribute("data-large"));
-                // console.log('large');
-
-            });
+            //do stuff on desktop
         }
         if (dmq_size === "wide") {
-
-            images.forEach(function(image, id) {
-                imageUrl = image.getAttribute("data-hd");
-                image.setAttribute("src", imageUrl);
-
-                // console.log(imageUrl, image.getAttribute("data-hd"));
-                // console.log('hd');
-
-            });
+            //do stuff on super wide
         }
-
+    
     }
-
+    
 };

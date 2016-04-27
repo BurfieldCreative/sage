@@ -6,19 +6,15 @@
 .main-container {
     @extend .container;
 }
+
 .main-container--flush {
-    @extend .container-full;
-    width: 100%;
+    main {
+        
+    }
 }
 
 .wrap.container {
     background: white;
-}
-
-.container {
-   width: 100%;
-   max-width: 1200px;
-   margin: auto;
 }
 
 
@@ -27,8 +23,16 @@
 // ==========================================================================
 main {
     @extend .col-12;
-    margin-top: $grid-gutter*3;
-    margin-bottom: $grid-gutter*3;
+    
+    &.main--flush {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &:not(.main--flush) {
+        margin-top: $grid-gutter*3;
+        margin-bottom: $grid-gutter*3;
+    }
+    
 }
 .sidebar {
     @extend .col-12;
@@ -39,50 +43,28 @@ main {
 body.sidebar-primary {
 
     .sidebar {
+        
         @extend .col-12;
 
-        @include breakpoint(small) {
-            @extend .col-4-tablet;
-        }
+        @extend .col-4-tablet;
 
-        @include breakpoint(medium) {
-            @extend .col-3-desktop;
-        }
+        @extend .col-3-desktop;
 
-        @include breakpoint(medium) {
-            @extend .col-3-hd;
-        }
+        @extend .col-3-hd;
+
     }
 
-  main {
-
+    main {
+    
         @extend .col-12;
-
-        @include breakpoint(small) {
-            @extend .col-8-tablet;
-        }
-
-        @include breakpoint(medium) {
-            @extend .col-9-desktop;
-        }
-
-        @include breakpoint(large) {
-            @extend .col-9-hd;
-        }
+    
+        @extend .col-8-tablet;
         
+        @extend .col-9-desktop;
         
-        
-        .container,
-        .container-full {
-        
-            @extend .col-12;
-            
-        }
-        
+        @extend .col-9-hd;
+    
     }
-    
-    
-    
 }
 
 
@@ -94,17 +76,17 @@ body {
         content: "mobile";        
     }
     
-    @include breakpoint(small) {
+    @media (min-width: $breakpoint-tablet) {
         &:after {
             content: "tablet";
         }
     }
-    @include breakpoint(medium) {
+    @media (min-width: $breakpoint-desktop) {
         &:after {
             content: "desktop";
         }
     }
-    @include breakpoint(large) {
+    @media (min-width: $breakpoint-hd) {
         &:after {
             content: "wide";
         }

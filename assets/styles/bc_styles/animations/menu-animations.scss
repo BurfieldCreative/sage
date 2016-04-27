@@ -3,32 +3,6 @@ body {
 	overflow-x: hidden;
 }
 
-.overlay {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	background: rgba(000,000,000,0.5);
-	height: 0%;
-	width: 0%;
-	transition: opacity 0.5s, width 0.1s, height 0.1s;
-	z-index: 0;
-	opacity: 0;
-}
-
-.overlay.open {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: rgba(000,000,000,0.5);
-	height: 100%;
-	width: 100%;
-	transition: opacity 0.5s, width 0.1s, height 0.1s ;
-	z-index: 5;
-	opacity: 1;
-}
-
 //Default mobile  settings
 .nav-off-canvas {
 	position: absolute;
@@ -48,7 +22,17 @@ body {
 		transition: all 0.5s;
 
 		//the overlay
-
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			background: rgba(0,0,0,0.2);
+			content: '';
+			opacity: 0;
+			transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+		}
 	}
 
 	//When the menu displays

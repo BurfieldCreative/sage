@@ -30,7 +30,7 @@ footer.footer {
 .address {
       text-align: center;
 
-      @include breakpoint(small) {
+       @media (min-width: $breakpoint-tablet) {
           text-align: left;
       }
 }
@@ -42,7 +42,7 @@ footer .social {
     text-align: center;
     margin-top: $grid-gutter;
 
-    @include breakpoint(small) {
+    @media (min-width: $breakpoint-tablet) {
         margin-top: -$grid-gutter/3;
         float: right;
         text-align: right;
@@ -73,7 +73,7 @@ footer .social {
     display: block;
     text-align: center;
     
-    @include breakpoint(small) {
+    @media (min-width: $breakpoint-tablet) {
         text-align: left;
     }
 }

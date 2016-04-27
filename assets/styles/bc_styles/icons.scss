@@ -1,28 +1,15 @@
-//Uncomment below if using a standard wordpress layout
-
-// @font-face {
-//     font-family: 'icomoon';
-//     src:    url('/wp-content/themes/sage/dist/fonts/icomoon.eot?njrzk9');
-//     src:    url('/wp-content/themes/sage/dist/fonts/icomoon.eot?njrzk9#iefix') format('embedded-opentype'),
-//         url('/wp-content/themes/sage/dist/fonts/icomoon.ttf?njrzk9') format('truetype'),
-//         url('/wp-content/themes/sage/dist/fonts/icomoon.woff?njrzk9') format('woff'),
-//         url('/wp-content/themes/sage/dist/fonts/icomoon.svg?njrzk9#icomoon') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
 @font-face {
     font-family: 'icomoon';
-    src:    url('/app/themes/sage/dist/fonts/icomoon.eot?njrzk9');
-    src:    url('/app/themes/sage/dist/fonts/icomoon.eot?njrzk9#iefix') format('embedded-opentype'),
-        url('/app/themes/sage/dist/fonts/icomoon.ttf?njrzk9') format('truetype'),
-        url('/app/themes/sage/dist/fonts/icomoon.woff?njrzk9') format('woff'),
-        url('/app/themes/sage/dist/fonts/icomoon.svg?njrzk9#icomoon') format('svg');
+    src:    url('../fonts/icomoon.eot?njrzk9');
+    src:    url('../fonts/icomoon.eot?njrzk9#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?njrzk9') format('truetype'),
+        url('../fonts/icomoon.woff?njrzk9') format('woff'),
+        url('../fonts/icomoon.svg?njrzk9#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"]:before, [class*=" icon-"]:before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: none;

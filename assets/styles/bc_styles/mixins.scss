@@ -19,11 +19,6 @@
     padding-bottom: $grid-gutter;
 }
 
-.island-bottom-half {
-    padding-top: 0;
-    padding-bottom: $grid-gutter;
-}
-
 //these use margin rather then padding
 .island-margin {
     margin-top: $grid-gutter*2;
@@ -42,10 +37,6 @@
 
 .island-half-margin {
     margin-top: $grid-gutter;
-    margin-bottom: $grid-gutter;
-}
-
-.island-bottom-half-margin {
     margin-bottom: $grid-gutter;
 }
 
@@ -85,8 +76,9 @@
 // }
 // ==========================================================================
 
+/*doesnt work 
 @mixin breakpoint($point) {
-
+    
     @if $point == small {
         @media (min-width: $breakpoint-tablet)  { @content; }
     }
@@ -99,16 +91,20 @@
         @media (min-width: $breakpoint-hd) { @content; }
     }
 }
-
-
-.clear {
-   clear: both;
-}
-
-img {
-   display: block;
-}
-
-.overflow {
-   overflow: hidden;
+*/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

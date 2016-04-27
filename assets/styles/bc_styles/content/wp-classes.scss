@@ -23,23 +23,34 @@ main.main {
     height: auto;
 }
 
+
 .alignleft,
 .alignright {
     @extend .img-fluid;
     height: auto;
 	margin-bottom: $grid-gutter;
 }
+// Only float if not on an extra small device
+.alignleft {
+    
+    @media only screen and (min-width: $breakpoint-tablet) {
+        
+        float: left;
+        margin-right: 20px;
+        
+    }
+    
+}
 
-@include breakpoint(medium) {
-
-	// Only float if not on an extra small device
-	.alignleft {
-		@extend .img-left;
-	}
-
-	.alignright {
-		@extend .img-right;
-	}
+.alignright {
+        
+    @media only screen and (min-width: $breakpoint-tablet) {
+            
+        float: right;
+        margin-left: 20px;
+        
+    }
+    
 }
 
 // ==========================================================================

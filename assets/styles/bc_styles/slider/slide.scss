@@ -191,7 +191,7 @@ ul.slick-dots {
     text-align: center;
     display: none !important;
 
-    @include breakpoint(small) {
+    @media (min-width: $breakpoint-tablet) {
         display: block !important;
         position: absolute;
         right: 0;
@@ -301,7 +301,7 @@ ul.slick-dots {
         color: white;
     }
 
-    @include breakpoint(small) {
+    @media (min-width: $breakpoint-tablet) {
         background: rgba(000,000,000,0.7);
         position: absolute;
         top: $grid-gutter*2;
@@ -324,7 +324,7 @@ ul.slick-dots {
         background: rgba(000,000,000,0.8);
     }
 
-    @include breakpoint(small) {
+    @media (min-width: $breakpoint-tablet) {
         position: absolute;
         text-align: left;
         bottom: $grid-gutter*2;

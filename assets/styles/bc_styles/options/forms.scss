@@ -27,14 +27,14 @@
                         float: left;
                         margin-bottom: $grid-gutter;
 
-                        @include breakpoint(small) {
+                        @media (min-width: $breakpoint-tablet) {
                             width: 50%;
                         }
 
                         &:nth-child(2n+1) {
                             width: 100%;
 
-                            @include breakpoint(small) {
+                            @media (min-width: $breakpoint-tablet) {
                                 width: 46%;
                                 margin-right: 4%;
                             }
@@ -64,7 +64,7 @@
             height: auto;
             border-radius: 3px;
 
-            @include breakpoint(small) {
+            @media (min-width: $breakpoint-tablet) {
                 padding: $grid-gutter/2;
             }
         }
@@ -72,7 +72,7 @@
         select {
             height: 42px;
 
-            @include breakpoint(small) {
+            @media (min-width: $breakpoint-tablet) {
                 height: 36px;
             }
         }
@@ -88,7 +88,7 @@
         color: $header_menu_text_hover;
         border-radius: 3px;
 
-        @include breakpoint(small) {
+        @media (min-width: $breakpoint-tablet) {
             width: auto;
         }
 

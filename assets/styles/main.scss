@@ -1,45 +1,74 @@
-//original stylesheets
-@import "../../bower_components/base/src/scss/base/_variables";
-@import "bc_styles/variables.scss";
+//@import "common/variables";
 
-@import "../../bower_components/base/src/scss/base/_mixins";
-@import "../../bower_components/base/src/scss/base/_resets";
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+// endbower
 
-@import "../../bower_components/base/src/scss/base/_global";
-@import "../../bower_components/base/src/scss/base/_lists";
-@import "../../bower_components/base/src/scss/base/_blockquotes";
-@import "../../bower_components/base/src/scss/base/_tables";
-@import "../../bower_components/base/src/scss/base/_code";
-@import "../../bower_components/base/src/scss/base/_forms";
-
-@import "../../bower_components/base/src/scss/base/_assets";
-
-@import "../../bower_components/base/src/scss/base/_grid";
-
-// Helpers
-@import "../../bower_components/base/src/scss/base/_helpers";
-
-// Animations
-@import "../../bower_components/base/src/scss/base/_animations";
-
-// Print Styles
-@media print {
-  @import "../../bower_components/base/src/scss/base/_print";
-}
-
-// Sage stylesheets
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 @import "bc_styles/icons.scss";
+
+    //@import "../../bower_components/base/src/scss/style.scss"; //TODO pull using gulp and place main.scss after so variables work
+    //@import "../../bower_components/base/src/scss/base/_variables";
+    @import "bc_styles/variables.scss";
+    
+    @import "../../bower_components/base/src/scss/base/_mixins";
+    @import "../../bower_components/base/src/scss/base/_resets";
+    
+    @import "../../bower_components/base/src/scss/base/_global";
+    @import "../../bower_components/base/src/scss/base/_lists";
+    @import "../../bower_components/base/src/scss/base/_blockquotes";
+    @import "../../bower_components/base/src/scss/base/_tables";
+    @import "../../bower_components/base/src/scss/base/_code";
+    @import "../../bower_components/base/src/scss/base/_forms";
+    
+    @import "../../bower_components/base/src/scss/base/_assets";
+    
+    @import "../../bower_components/base/src/scss/base/_grid";
+    // @import "base/_grid-non-responsive";
+    
+    // Helpers
+    @import "../../bower_components/base/src/scss/base/_helpers";
+    
+    @import "../../bower_components/base/src/scss/_mobile-styles";
+    
+    // Tablet Styles
+    @media only screen and (min-width: $breakpoint-tablet) {
+    @import "../../bower_components/base/src/scss/_tablet-styles";
+    }
+    
+    // Desktop Styles
+    @media only screen and (min-width: $breakpoint-desktop) {
+    @import "../../bower_components/base/src/scss/_desktop-styles";
+    }
+    
+    // HD Styles
+    @media only screen and (min-width: $breakpoint-hd) {
+    @import "../../bower_components/base/src/scss/_hd-styles";
+    }
+    
+    // Animations
+    @import "../../bower_components/base/src/scss/base/_animations";
+    
+    // Print Styles
+    @media print {
+    @import "../../bower_components/base/src/scss/base/_print";
+    }
+
+
+
 @import "bc_styles/mixins.scss";
 
 @import "bc_styles/animations/menu-animations.scss";
 
 @import "bc_styles/header/header.scss";
 
+@import "bc_styles/content/cards.scss";
 @import "bc_styles/content/content.scss";
+@import "bc_styles/content/hero.scss";
 @import "bc_styles/content/layout.scss";
 @import "bc_styles/content/sidebar.scss";
+@import "bc_styles/content/typography.scss";
 @import "bc_styles/content/wp-classes.scss";
 
 @import "bc_styles/footer/footer.scss";
