@@ -121,7 +121,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5715e2bdafe32",
+                            "key": "field_571f71d49fe48",
                             "label": "Block Title",
                             "name": "block_title",
                             "type": "text",
@@ -142,29 +142,7 @@
                             "disabled": 0
                         },
                         {
-                            "key": "field_5715e328afe35",
-                            "label": "Image Alignment",
-                            "name": "image_alignment",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 50,
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "Right": "Right",
-                                "Left": "Left"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "Right",
-                            "layout": "horizontal"
-                        },
-                        {
-                            "key": "field_5715e300afe34",
+                            "key": "field_571f6fcd9fe45",
                             "label": "Block Image",
                             "name": "block_image",
                             "type": "image",
@@ -188,7 +166,35 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5715e2dcafe33",
+                            "key": "field_571f6ff09fe46",
+                            "label": "Image Alignment",
+                            "name": "image_alignment",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Right": "Right",
+                                "Left": "Left"
+                            },
+                            "default_value": [
+                                "Right"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        },
+                        {
+                            "key": "field_571f6fad9fe44",
                             "label": "Block Content",
                             "name": "block_content",
                             "type": "wysiwyg",
@@ -331,6 +337,100 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "571f75b14c1a4",
+                    "name": "two_column_content",
+                    "label": "Two Column Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_571f75de4c1a5",
+                            "label": "Column Content",
+                            "name": "column_content",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 2,
+                            "max": 2,
+                            "layout": "block",
+                            "button_label": "Add Row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_571f75fa4c1a7",
+                                    "label": "Block Title",
+                                    "name": "block_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_571f76084c1a8",
+                                    "label": "Block Image",
+                                    "name": "block_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_571f76394c1aa",
+                                    "label": "Block Content",
+                                    "name": "block_content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         }
@@ -354,5 +454,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1461154150
+    "modified": 1461763012
 }
