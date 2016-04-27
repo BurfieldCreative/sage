@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
+Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and getbase Sass, that will help you make better themes.
 
 * Source: [https://github.com/roots/sage](https://github.com/roots/sage)
 * Homepage: [https://roots.io/sage/](https://roots.io/sage/)
@@ -10,6 +10,9 @@ Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and B
 * Twitter: [@rootswp](https://twitter.com/rootswp)
 * Newsletter: [Subscribe](http://roots.io/subscribe/)
 * Forum: [https://discourse.roots.io/](https://discourse.roots.io/)
+
+* get Base: [https://getbase.org/](http://getbase.org/)
+
 
 
 ## Installation stand alone version
@@ -25,4 +28,4 @@ git clone --recursive --depth 1 git@github.com:BurfieldCreative/bc-wordpress-bas
 1. 	``` cd ``` into your DIR and run ```chmod 744 init```
 2. 	   Run the .init bash script - ```./init``` this will remove the old git repo and setup sage
 3.     Open the manifest file inside sage and change the url its found in content/themes/sage/assets/manifest.local
-4.      All done run ```gulp watch``` and change the theme to sage 
+4.      All done run ```gulp watch``` and change the theme to sage
