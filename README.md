@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and getbase Sass, that will help you make better themes.
+Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and getbase SCSS, that will help you make better themes.
 
 * Source: [https://github.com/roots/sage](https://github.com/roots/sage)
 * Homepage: [https://roots.io/sage/](https://roots.io/sage/)
@@ -11,7 +11,7 @@ Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and g
 * Newsletter: [Subscribe](http://roots.io/subscribe/)
 * Forum: [https://discourse.roots.io/](https://discourse.roots.io/)
 
-* get Base: [https://getbase.org/](http://getbase.org/)
+* Get Base the styling template: [https://getbase.org/](http://getbase.org/)
 
 
 
