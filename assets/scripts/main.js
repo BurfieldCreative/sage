@@ -105,7 +105,7 @@
     });
 
     // Mobile menu button
-    $('#mobile-menu-button').click(function(event){
+    $('#mobile-menu-button').on('click', function(){
       event.stopPropagation();
       if(!$(this).hasClass('open')) {
         $('#mobile-menu-button, .mobile-menu').addClass('open');
@@ -115,11 +115,11 @@
     });
 
 
-    $('.mobile-menu').click(function(event){
+    $('.mobile-menu').on('click',  function(event){
        event.stopPropagation();
     });
 
-    $('html').click(function() {
+    $('html').on('click', function() {
       if($('.mobile-menu').hasClass('open')) {
         $('.mobile-menu, #mobile-menu-button').removeClass('open');
       }
@@ -130,82 +130,82 @@
     // http://codepen.io/Lewitje/pen/YybQEP original copy from Lewi Hussay updated to work with multiple divs
     // Equal height - by Burfield www.burfield.co.uk
     // Example usage use data-match-height="groupName"> on anything!!!
-    
+
     var matchHeight = (function () {
-    
+
         "use strict";
-    
+
         function matchHeight(){
             //get all matched height attr
             var groupName = $('[data-match-height]');
             var groupHeights = [];
-    
+
             // for each attr set the min height to auto this makes it responsive
             $(groupName).each(function(){
-    
+
                 var dataName = $(this);
-    
+
                 var key = dataName.data('match-height');
-    
+
                 //create an array of heights
                 if(!(key in groupHeights)){
                     groupHeights[key] = [];
                 }
-    
+
                 dataName.css('min-height', 'auto');
-    
+
                 dataName.each(function() {
-    
+
                     groupHeights[key].push(dataName.outerHeight());
-    
+
                 });
-    
+
                 return groupHeights.key;
-    
+
             });
-    
+
             var obj = groupHeights;
-    
+
             for (var index in obj) {
                 if (!obj.hasOwnProperty(index)) {
                     continue;
                 }
-    
+
                 var minHeight = Math.max.apply(null, obj[index]);
-    
+
                 //if window is bigger then 600px set new height else set height to auto
                 if ($(window).width() > 600) {
                     $('[data-match-height="'+index+'"]').css('min-height', minHeight);
                 } else {
                     $('[data-match-height="'+index+'"]').css('min-height', 'auto');
                 }
-    
+
             }
-    
+
         }
-    
+
         function eventListeners(){
             $(window).on('resize', function() {
                 matchHeight();
             });
         }
-    
+
         function init() {
             eventListeners();
             matchHeight();
         }
-    
+
         return {
             init: init
         };
-    
+
     }());
-    
+
     $(document).ready(function() {
         matchHeight.init();
     });
 
-    
+
 
 
 })(jQuery); // Fully reference jQuery after this point.
@@ -213,18 +213,18 @@
 
 
 var detect_mq = {
-    
+
     live: true, // Boolean: Trigger on window resize, true or false
     threshold: 200, // Integer: Threshold time after window resize, in milliseconds
     callback: function () {
-        
+
         var element = document.body;
-        
+
         //remove any of our previous classes
         element.classList.remove( "mobile", "tablet", "desktop", "wide" );
-        //add class to element        
+        //add class to element
         element.classList.add(dmq_size);
-        
+
         if (dmq_size === "mobile") {
             //do stuff on mobile
         }
@@ -237,7 +237,7 @@ var detect_mq = {
         if (dmq_size === "wide") {
             //do stuff on super wide
         }
-    
+
     }
-    
+
 };
