@@ -66,7 +66,9 @@ use Roots\Sage\Wrapper;
              * DEBUG
              */
             ?>
-            <?php echo '<pre class="container">Debug: '.print_r( Wrapper\template_path(), true ).'</pre>'; ?>
+            <?php if(WP_ENV == 'local') {
+                echo '<pre>Debug: '.print_r( Wrapper\template_path(), true ).'</pre>';
+            } ?>
 
             <div class="row" role="document">
 
