@@ -6,15 +6,19 @@
 .main-container {
     @extend .container;
 }
-
 .main-container--flush {
-    main {
-        
-    }
+    @extend .container-full;
+    width: 100%;
 }
 
 .wrap.container {
     background: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
 }
 
 
@@ -23,7 +27,7 @@
 // ==========================================================================
 main {
     @extend .col-12;
-    
+
     &.main--flush {
         padding-left: 0;
         padding-right: 0;
@@ -32,7 +36,7 @@ main {
         margin-top: $grid-gutter*3;
         margin-bottom: $grid-gutter*3;
     }
-    
+
 }
 .sidebar {
     @extend .col-12;
@@ -43,7 +47,7 @@ main {
 body.sidebar-primary {
 
     .sidebar {
-        
+
         @extend .col-12;
 
         @extend .col-4-tablet;
@@ -55,27 +59,27 @@ body.sidebar-primary {
     }
 
     main {
-    
+
         @extend .col-12;
-    
+
         @extend .col-8-tablet;
-        
+
         @extend .col-9-desktop;
-        
+
         @extend .col-9-hd;
-    
+
     }
 }
 
 
 body {
-    
+
     &:after {
         display: none;
-        
-        content: "mobile";        
+
+        content: "mobile";
     }
-    
+
     @media (min-width: $breakpoint-tablet) {
         &:after {
             content: "tablet";
@@ -91,5 +95,5 @@ body {
             content: "wide";
         }
     }
-    
+
 }
