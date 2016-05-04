@@ -2,14 +2,14 @@
 
     <?php $name = get_bloginfo( 'name' ); ?>
 	<div itemprop="name"><?php echo $name; ?></div>
-	
+
 	<?php $description = get_bloginfo( 'description' ); ?>
 	<div class="vh" itemprop="description"><?php echo ($description !== "Just another WordPress site") ? $description : ''?></div>
 
 	<?php
 	$latitude 		= get_field( 'address_latitude', 'option' );
-	$longitude 		= get_field( 'address_longitude', 'option' );    
-    	
+	$longitude 		= get_field( 'address_longitude', 'option' );
+
 	if( false != $latitude )
 		$lat = 'data-lat="'.$latitude.'"';
 	else
@@ -22,7 +22,7 @@
 	?>
 
 	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" <?php echo $lat; ?> <?php echo $lng; ?>>
-        
+
         <?php
         $street_address_1	= get_field( 'street_address_1', 'option' );
         $street_address_2	= get_field( 'street_address_2', 'option' );
@@ -31,7 +31,7 @@
         $postcode           = get_field( 'postcode', 'option' );
         $country            = get_field( 'country', 'option' );
         ?>
-        
+
 		<?php if( false != $street_address_1 || false != $street_address_2 ) : ?>
 		<span class="address__line" itemprop="streetAddress">
 
@@ -67,10 +67,10 @@
 		<?php endif; ?>
 
 	</div>
-    
-    
+
+
     <?php $contact_email = get_field( 'contact_email', 'option' ); ?>
-	<?php if( false != $country ) : ?>
+	<?php if( false != $contact_email ) : ?>
 	<div class="vcard__email">
 		<a itemprop="email" href="mailto:<?php echo antispambot( $contact_email, true ); ?>">
 			<?php echo antispambot( $contact_email ); ?>
@@ -78,7 +78,7 @@
 	</div>
 	<?php endif; ?>
 
-	
+
     <?php $contact_telephone = get_field( 'contact_telephone', 'option' ); ?>
 	<?php if( false != $contact_telephone ) : ?>
 	<div class="vcard__tel">
