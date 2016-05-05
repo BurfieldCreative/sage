@@ -2,7 +2,8 @@
 //Main header banner
 // ==========================================================================
 header.banner {
-
+    position: relative;
+    z-index: 99; //This sets the header above overlay for mobile devices
     background: $headerbackground;
     overflow: hidden;
 

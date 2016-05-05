@@ -44,7 +44,8 @@ body {
 	& ~ footer,
 	& ~ header,
 	& ~ .wrap.container,
-	& ~ .move{
+	& ~ .move,
+	& ~ .main-container--flush{
 		transform: translate3d(0, 0, 0);
 		transition: all 0.5s;
 
@@ -70,7 +71,8 @@ body {
 		& ~ footer,
 		& ~ header,
 		& ~ .wrap.container,
-		& ~ .move{
+		& ~ .move,
+		& ~ .main-container--flush{
 
 			//animated overlay
 			&:after {
@@ -111,7 +113,8 @@ body {
 		& ~ footer,
 		& ~ header,
 		& ~ .wrap.container,
-		& ~ .move{
+		& ~ .move,
+		& ~ .main-container--flush{
 			transform: translate3d(-300px, 0, 0);
 			transition: all 0.5s;
 		}
@@ -129,7 +132,8 @@ body {
 		& ~ footer,
 		& ~ header,
 		& ~ .wrap.container,
-		& ~ .move{
+		& ~ .move,
+		& ~ .main-container--flush{
 			transform: translate3d(300px, 0, 0);
 			transition: all 0.5s;
 		}
@@ -147,7 +151,8 @@ body {
 		& ~ footer,
 		& ~ header,
 		& ~ .wrap.container,
-		& ~ .move{
+		& ~ .move,
+		& ~ .main-container--flush{
 			transform: translate3d(-300px, 0, 0);
 			transition: all 0.5s;
 		}
