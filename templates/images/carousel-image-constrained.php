@@ -12,14 +12,14 @@
     	'settings' => array(
 
 				array(
-					'name' => 'small',
+					'name' => 'mobile',
 					'width' => 450,
 					'height' => 253,
 					'crop' => true,
 					'resize' => true,
 				),
 				array(
-					'name' => 'medium',
+					'name' => 'tablet',
 					'width' => 610,
 					'height' => 343,
 					'crop' => true,
@@ -27,7 +27,7 @@
 				),
 
 				array(
-					'name' => 'large',
+					'name' => 'desktop',
 					'width' => 930,
 					'height' => 523,
 					'crop' => true,
@@ -35,7 +35,7 @@
 				),
 
 				array(
-					'name' => 'hd',
+					'name' => 'wide',
 					'width' => 1090,
 					'height' => 613,
 					'crop' => true,
@@ -50,8 +50,8 @@
     ?>
 
 
-    <img class="swap-image"
-		src="<?php echo $image_data['sized_imagery']['hd']['src']; ?>"
+	<img class="swap-image"
+		src="<?php echo $image_data['sized_imagery']['wide']['src']; ?>"
 
 		<?php foreach( $image_data['sized_imagery'] AS $break_name => $img_set ) : ?>
 

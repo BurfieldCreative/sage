@@ -224,18 +224,40 @@ var detect_mq = {
         element.classList.remove( "mobile", "tablet", "desktop", "wide" );
         //add class to element
         element.classList.add(dmq_size);
+        var images = [].slice.call(document.getElementsByClassName("swap-image"));
 
         if (dmq_size === "mobile") {
-            //do stuff on mobile
+            images = [].slice.call(document.getElementsByClassName("swap-image"));
+
+            images.forEach(function(image, id) {
+                imageUrl = image.getAttribute("data-mobile");
+                image.setAttribute("src", imageUrl);
+            });
         }
         if (dmq_size === "tablet") {
-            //do stuff on tablet
+            images = [].slice.call(document.getElementsByClassName("swap-image"));
+
+            images.forEach(function(image, id) {
+                imageUrl = image.getAttribute("data-tablet");
+                image.setAttribute("src", imageUrl);
+            });
         }
         if (dmq_size === "desktop") {
-            //do stuff on desktop
+            images = [].slice.call(document.getElementsByClassName("swap-image"));
+
+            images.forEach(function(image, id) {
+                imageUrl = image.getAttribute("data-tablet");
+                image.setAttribute("src", imageUrl);
+            });
         }
         if (dmq_size === "wide") {
-            //do stuff on super wide
+            images = [].slice.call(document.getElementsByClassName("swap-image"));
+
+            images.forEach(function(image, id) {
+                imageUrl = image.getAttribute("data-tablet");
+                image.setAttribute("src", imageUrl);
+
+            });
         }
 
     }

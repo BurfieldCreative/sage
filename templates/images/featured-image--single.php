@@ -9,16 +9,16 @@
     $args = array(
     	'image' => $image,
     	'settings' => array(
-                
+
             array(
-				'name' => 'small',
+				'name' => 'mobile',
 				'width' => 640,
 				'height' => 360,
 				'crop' => true,
 				'resize' => true,
 			),
 			array(
-				'name' => 'medium',
+				'name' => 'tablet',
 				'width' => 960,
 				'height' => 540,
 				'crop' => true,
@@ -26,7 +26,7 @@
 			),
 
 			array(
-				'name' => 'large',
+				'name' => 'desktop',
 				'width' => 1040,
 				'height' => 585,
 				'crop' => true,
@@ -34,13 +34,13 @@
 			),
 
 			array(
-				'name' => 'hd',
+				'name' => 'wide',
 				'width' => 2040,
 				'height' => 1148,
 				'crop' => true,
 				'resize' => true,
 			),
-			
+
         ),
     );
     $ri = BC_Responsive_Images::get_instance();
@@ -48,7 +48,7 @@
     ?>
 
 	<img class="swap-image"
-		src="<?php echo $image_data['sized_imagery']['hd']['src']; ?>"
+		src="<?php echo $image_data['sized_imagery']['wide']['src']; ?>"
 
 		<?php foreach( $image_data['sized_imagery'] AS $break_name => $img_set ) : ?>
 

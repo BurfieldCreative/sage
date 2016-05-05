@@ -20,14 +20,14 @@ function get_image_acf_id($id) {
         	'settings' => array(
 
     				array(
-    					'name' => 'small',
+    					'name' => 'mobile',
     					'width' => 694,
     					'height' => 390,
     					'crop' => true,
     					'resize' => true,
     				),
     				array(
-    					'name' => 'medium',
+    					'name' => 'tablet',
     					'width' => 674,
     					'height' => 379,
     					'crop' => true,
@@ -35,7 +35,7 @@ function get_image_acf_id($id) {
     				),
 
     				array(
-    					'name' => 'large',
+    					'name' => 'desktop',
     					'width' => 798,
     					'height' => 448,
     					'crop' => true,
@@ -43,7 +43,7 @@ function get_image_acf_id($id) {
     				),
 
     				array(
-    					'name' => 'hd',
+    					'name' => 'wide',
     					'width' => 862,
     					'height' => 485,
     					'crop' => true,
@@ -54,7 +54,7 @@ function get_image_acf_id($id) {
         $ri = BC_Responsive_Images::get_instance();
         $image_data = $ri->image_data( $args );
 
-        echo '<img class="th img-thumb full-width " src="' .  $image_data["sized_imagery"]["hd"]["src"] . '" ';
+        echo '<img class="th img-thumb full-width " src="' .  $image_data["sized_imagery"]["wide"]["src"] . '" ';
 
         foreach( $image_data['sized_imagery'] AS $break_name => $img_set ){
 
