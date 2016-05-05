@@ -410,6 +410,9 @@
 <p>
 	There are a few availble menus to swap and try out something new go to base.php and change the nav style to one of the available options
 </p>
+<p>
+    When using the mobile if something doesnt move when the mobile menu is active add a class move to the div and it'll slide
+</p>
 
 
 <?php

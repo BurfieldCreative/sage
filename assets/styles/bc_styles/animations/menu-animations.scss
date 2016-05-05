@@ -43,7 +43,8 @@ body {
 
 	& ~ footer,
 	& ~ header,
-	& ~ .wrap.container{
+	& ~ .wrap.container,
+	& ~ .move{
 		transform: translate3d(0, 0, 0);
 		transition: all 0.5s;
 
@@ -68,7 +69,8 @@ body {
 
 		& ~ footer,
 		& ~ header,
-		& ~ .wrap.container{
+		& ~ .wrap.container,
+		& ~ .move{
 
 			//animated overlay
 			&:after {
@@ -108,7 +110,8 @@ body {
 
 		& ~ footer,
 		& ~ header,
-		& ~ .wrap.container{
+		& ~ .wrap.container,
+		& ~ .move{
 			transform: translate3d(-300px, 0, 0);
 			transition: all 0.5s;
 		}
@@ -125,7 +128,8 @@ body {
 
 		& ~ footer,
 		& ~ header,
-		& ~ .wrap.container{
+		& ~ .wrap.container,
+		& ~ .move{
 			transform: translate3d(300px, 0, 0);
 			transition: all 0.5s;
 		}
@@ -142,7 +146,8 @@ body {
 
 		& ~ footer,
 		& ~ header,
-		& ~ .wrap.container{
+		& ~ .wrap.container,
+		& ~ .move{
 			transform: translate3d(-300px, 0, 0);
 			transition: all 0.5s;
 		}
@@ -203,7 +208,6 @@ body {
 .hamburger span:after {
 	width: $hamburgerWidth;
 	height: 3px;
-	background-color: #000;
 	display: block;
 }
 .hamburger span:before {
