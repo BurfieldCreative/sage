@@ -246,7 +246,7 @@ var detect_mq = {
             images = [].slice.call(document.getElementsByClassName("swap-image"));
 
             images.forEach(function(image, id) {
-                imageUrl = image.getAttribute("data-tablet");
+                imageUrl = image.getAttribute("data-desktop");
                 image.setAttribute("src", imageUrl);
             });
         }
@@ -254,7 +254,7 @@ var detect_mq = {
             images = [].slice.call(document.getElementsByClassName("swap-image"));
 
             images.forEach(function(image, id) {
-                imageUrl = image.getAttribute("data-tablet");
+                imageUrl = image.getAttribute("data-wide");
                 image.setAttribute("src", imageUrl);
 
             });
