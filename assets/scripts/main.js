@@ -202,7 +202,9 @@
     }());
 
     $(document).ready(function() {
-        matchHeight.init();
+        if ($(window).width() < 739) {
+            matchHeight.init();
+        }
     });
 
 
