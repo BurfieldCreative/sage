@@ -465,4 +465,7 @@
 
         </div>
     </div>
+    <h2 class="text-center island">background image check help page for code</h2>
+    <div class="bg-swap-image" <?php //$bgimgfield = get_field('bg_image'); include locate_template('templates/images/bgackground-image-example.php'); ?> >
+    </div>
 </div>

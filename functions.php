@@ -24,8 +24,6 @@ $sage_includes = [
 
   'lib/bc/bc-default-pages.php',            // Loads custom pages for templating
 
-  'lib/bc/bc-extend-gravity-forms.php',     // Extensions to Gravity Forms
-
   'lib/bc/bc-is.php',                       // Custom bool functions for state checking -> bc_is_blog_page()
 
   'lib/bc/bc-protected-name.php',           // Protected name function
